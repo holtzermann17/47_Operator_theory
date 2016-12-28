@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolarDecomposition}
+\pmcreated{2013-03-22 16:01:54}
+\pmmodified{2013-03-22 16:01:54}
+\pmowner{aube}{13953}
+\pmmodifier{aube}{13953}
+\pmtitle{polar decomposition}
+\pmrecord{10}{38075}
+\pmprivacy{1}
+\pmauthor{aube}{13953}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{mathrsfs}
+
+\usepackage{amssymb, amsfonts,amsthm,amsxtra,amsmath}
+\usepackage{latexsym}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The polar decomposition of an operator is a generalization of the familiar factorization of a complex number $z$ in a radial part $|z|$ and an angular part $z/|z|$.
+
+Let $\mathscr{H}$ be a Hilbert space, $x$ a bounded operator on $\mathscr{H}$. Then there exist a pair $(h,u)$, with $h$ a bounded positive operator and $u$ a partial isometry on $\mathscr{H}$, such that \[x=uh.\]\\ 
+
+If we impose the further conditions that $1-u^*u$ is the projection to the kernel of $x$, and $\ker(h)=\ker(x)$, then $(h,u)$ is unique, and is called the \emph{polar decomposition} of $x$. The operator $h$ will be $|x|$, the square root of $x^*x$, and $u$ will be the partial isometry, determined by \begin{itemize} \item $u\xi=0$ for $\xi \in \ker(x)$ \item $u(|x|\xi)=x\xi$ for $\xi\in \mathscr{H}$. \end{itemize}
+
+If $x$ is a closed, densely defined unbounded operator on $\mathscr{H}$, the polar decomposition $(u,h)$ still exists, where now $h$ will be the unbounded positive operator $|x|$ with the same domain $\mathscr{D}(x)$ as $x$, and $u$ still the partial isometry determined by \begin{itemize} \item $u\xi=0$ for $\xi \in \ker(x)$ \item $u(|x|\xi)=x\xi$ for $\xi\in \mathscr{D}(x)$. \end{itemize}
+
+If $x$ is affiliated with a von Neumann algebra $M$, both $u$ and $h$ will be affiliated with $M$.
+%%%%%
+%%%%%
+\end{document}

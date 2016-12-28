@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTaylorsFormulaForMatrixFunctions}
+\pmcreated{2013-03-22 17:57:04}
+\pmmodified{2013-03-22 17:57:04}
+\pmowner{joen235}{18354}
+\pmmodifier{joen235}{18354}
+\pmtitle{proof of Taylor's formula for matrix functions}
+\pmrecord{4}{40450}
+\pmprivacy{1}
+\pmauthor{joen235}{18354}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A56}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+ \theoremstyle{plain}
+  \newtheorem*{thm*}{Theorem}
+\begin{document}
+\begin{thm*}
+Let $p$ be a polynomial and suppose $\mathbf{A}$ and $\mathbf{B}$
+are squared matrices of the same size, then ${\displaystyle
+p(\mathbf{A}+\mathbf{B})=\sum_{k=0}^{n}\frac{1}{k!}p^{(k)}(\mathbf{A})\mathbf{B}^{k}}$
+where $n=\deg(p)$.
+\end{thm*}
+
+\begin{proof}
+Since $p$ is a polynomial, we can apply the Taylor expansion:
+
+$$p(x)=\sum_{k=0}^{n}\frac{1}{k!}p^{\left(k\right)}\left(x_{0}\right)\left(x-x_{0}\right)^{k}$$
+where $ n=\deg(p)$. Now let $x=\mathbf{A}+\mathbf{B}$ and
+$x_0=\mathbf{A}$.
+
+The Taylor expansion can be checked as follows: let
+$p\left(x\right)=\sum_{k=0}^{n}a_{k}x^{k}$ for coefficients $a_{k}$
+(note that this coefficients can be taken from the space of square
+matrices defined over a field). We define the formal derivative of
+this polynomial as $p^{\left(1\right)}\left(x\right) =
+\frac{dp}{dx}=\sum_{k=1}^{n}a_{k}kx^{k-1}$ and we define
+$p^{\left(k\right)}=\frac{dp^{\left(k-1\right)}}{dx}$.
+
+ Then
+$p^{\left(k\right)}\left(x\right)=\sum_{i=k}^{n}a_{i}\frac{i!}{\left(i-k\right)!}x^{i-k}$
+and we have
+$\frac{1}{k!}p^{\left(k\right)}\left(x_{0}\right)=\sum_{i=k}^{n}a_{i}\frac{i!}{\left(i-k\right)!k!}\left(x_{0}\right)^{i-k}$.
+Now consider{\small
+\begin{eqnarray*}
+ &  & \sum_{k=0}^{n}\frac{1}{k!}p^{\left(k\right)}\left(x_{0}\right)\left(x-x_{0}\right)^{k}=\sum_{k=0}^{n}\left(\sum_{i=k}^{n}a_{i}\frac{i!}{\left(i-k\right)!k!}\left(x_{0}\right)^{i-k}\left(x-x_{0}\right)^{k}\right)\\
+ & = & \sum_{i=0}^{n}a_{i}\left(x_{0}\right)^{i}+\sum_{i=1}^{n}a_{i}i\left(x_{0}\right)^{i-1}\left(x-x_{0}\right)+\dots+\sum_{i=j}^{n}a_{i}\frac{i!}{\left(i-j\right)!j!}\left(x_{0}\right)^{i-j}\left(x-x_{0}\right)^{j}+\dots+a_{n}\left(x-x_{0}\right)^{n}\\
+ & = & a_{0}+a_{1}\left(x\right)+\dots+a_{i}\left(\sum_{j=0}^{i}\frac{i!}{\left(i-j\right)!j!}\left(x_{0}\right)^{i-j}\left(x-x_{0}\right)^{j}\right)+\dots+a_{n}\left(\sum_{j=0}^{n}\frac{n!}{\left(n-j\right)!j!}\left(x_{0}\right)^{n-j}\left(x-x_{0}\right)^{j}\right)\\
+ & = & \sum_{k=0}^{n}a_{k}x^{i}=p\left(x\right)\end{eqnarray*}
+ }
+since
+$\sum_{j=0}^{i}\frac{i!}{\left(i-j\right)!j!}\left(x_{0}\right)^{i-j}\left(x-x_{0}\right)^{j}=\left(x\right)^{i}$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

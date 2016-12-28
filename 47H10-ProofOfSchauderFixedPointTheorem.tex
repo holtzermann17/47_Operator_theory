@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSchauderFixedPointTheorem}
+\pmcreated{2013-03-22 13:45:22}
+\pmmodified{2013-03-22 13:45:22}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of Schauder fixed point theorem}
+\pmrecord{10}{34457}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47H10}
+\pmclassification{msc}{46T99}
+\pmclassification{msc}{46T20}
+\pmclassification{msc}{46B50}
+\pmclassification{msc}{54H25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The idea of the proof is to reduce to the finite dimensional case where we can apply the Brouwer fixed point theorem.
+
+Given $\epsilon>0$ notice that the family of open sets $\{ B_\epsilon(x)\colon x\in K\}$ is an open covering of $K$. Being $K$ compact there exists a finite subcover, i.e. there exists $n$ points $x_1,\ldots, x_n$ of $K$ such that the balls $B_\epsilon(x_i)$ cover the whole set $K$. 
+
+Define the functions $g_1, \ldots, g_n$ by
+\begin{displaymath}
+g_i(x):=
+\begin{cases}
+\epsilon -\|x-x_i\|, & \;\;\textrm{if $\|x-x_i\| \leq \epsilon$} \\
+0, & \;\;\textrm{if $\|x-x_i\| \geq \epsilon$}
+\end{cases}
+\end{displaymath}
+
+It is clear that each $g_i$ is continuous, $g_i(x) \geq 0$ and $\sum_{i=1}^n g_i(x) > 0$ for every $x \in K$.
+
+Thus we can define a function in $K$ by
+\begin{displaymath}
+g(x):= \frac{\sum_{i=1}^n g_i(x) x_i}{\sum_{i=1}^n g_i(x)}
+\end{displaymath}
+
+The above function $g$ is a continuous function from $K$ to the convex hull $K_0$ of $x_1, \ldots, x_n$. Moreover one can easily prove the following \PMlinkescapetext{estimate}
+\begin{displaymath}
+\|g(x)-x\| \leq \epsilon \quad\;\; \forall_{x \in K}
+\end{displaymath}
+
+Now, define the function $B:=g \circ f$. The restriction $\tilde{B}$ of $B$ to $K_0$ provides a continuous function $K_0 \longrightarrow K_0$.
+
+Since $K_0$ is compact convex subset of a finite dimensional vector space, we can apply the Brouwer fixed point theorem to assure the existence of $z \in K_0$  such that
+\begin{displaymath}
+B(z) = \tilde{B}(z) = z
+\end{displaymath}
+
+Therefore $g(f(z)) = z$ and we have the inequality
+\begin{displaymath}
+\|f(z) - z\| = \|f(z) - g(f(z))\| \leq \epsilon
+\end{displaymath}
+
+Summarizing, for each $\epsilon >0$ there exists $z = z(\epsilon) \in K$ such that $\|f(z) - z\| \leq \epsilon$. Then
+
+\begin{displaymath}
+\forall_{m \in \mathbb{N}} \quad\;\; \exists_{z_m \in K} \quad\;\; \|f(z_m)-z_m\| \leq \frac{1}{m}
+\end{displaymath}
+
+As $f(z_m)$ is in the compact space $K$, there is a subsequence $z_{m_k}$ such that $f(z_{m_k}) \longrightarrow x_0$, for some $x_0 \in K$.
+
+We then have
+\begin{eqnarray*}
+\|z_{m_k} -x_0\| & = & \|z_{m_k} - f(z_{m_k}) +f(z_{m_k}) -x_0\| \\
+& \leq & \|f(z_{m_k})-z_{m_k}\| + \|f(z_{m_k}) - x_0\| \\
+& \leq & \frac{1}{m_k} + \|f(z_{m_k}) - x_0\| \longrightarrow 0
+\end{eqnarray*}
+which means that $z_{m_k} \longrightarrow x_0$.
+
+As $f$ is continuous we have $f(z_{m_k}) \longrightarrow f(x_0)$. Both limits of $f(z_{m_k})$ must coincide, so we conclude that
+\begin{displaymath}
+f(x_0)=x_0
+\end{displaymath}
+
+i.e. $f$ has a fixed point. $\square$
+%%%%%
+%%%%%
+\end{document}

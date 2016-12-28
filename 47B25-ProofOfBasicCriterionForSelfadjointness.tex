@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBasicCriterionForSelfadjointness}
+\pmcreated{2013-03-22 14:53:05}
+\pmmodified{2013-03-22 14:53:05}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of basic criterion for self-adjointness}
+\pmrecord{5}{36564}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47B25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\begin{document}
+\begin{enumerate}
+\item $(1\implies 2)$ If $A$ is self-adjoint and $Ax = ix$, then $$i\|x\|^2=(ix,x) = (Ax,x) = (x,A^*x) = (x,Ax) = (x,ix) = \overline{(ix,x)} = -i\|x\|^2,$$
+so $x=0$. Similarly we prove that $Ax=-ix$ implies $x=0$. That $A$ is closed follows from the fact that the adjoint of an operator is always closed.
+\item $(2\implies 3)$ If $2$ holds, then $\{0\}= \Ker (A^*\pm i)^* = \Ker (A \mp i)^* = \Ran(A\mp i)^\perp$, so that $\Ran{A \mp i}$ is dense in $\mathscr{H}$. Also, since $A$ is symmetric, for $x\in D(A)$,
+$$\|(A+i)x\|^2=\|Ax\|^2 + \|x\|^2 + (Ax,ix) + (ix,Ax) = \|Ax\|^2 + \|x\|^2$$
+because $(Ax,ix) = (x,iA^*x)= (x,iAx) = -(ix,Ax)$.
+Hence $\|x\|\leq \|(A+i)x\|$, so that given a sequence $x_n\in D(A)$ such that $(A+i)x_n \to y$, we have that $\{(A+i)x_n\}$ is a Cauchy sequence and thus $\{x_n\}$ itself is a Cauchy sequence. Hence $\{x_n\}$ converges to some $x\in \mathscr{H}$ and since $A$ is closed it follows that $x\in D(A)$ and $(A+i)x = y$. This proves that $y\in \Ran(A+i)$, so that $\Ran(A+i)$ is closed (and similarly, $\Ran(A-i)$ is closed. Thus $\Ran(A\pm i)=\mathscr{H}$.
+\item $(3\implies 1)$ Suppose $3$. If $y\in D(A^*)$, then there is $x\in D(A)$ such that $(A+i)x = (A^*-i)y$. Since $A$ is symmetric, $(A+i)x = (A^*+i)x = (A-i)^*x$, so that $(A^*-i)(x-y)=0$. But since $\Ker(A^*-i) = \Ran(A+i)^\perp = \{0\}$, it follows that $x=y$, so that $y\in D(A)$. Hence $D(A)=D(A^*)$, and therefore $A$ is self-adjoint.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

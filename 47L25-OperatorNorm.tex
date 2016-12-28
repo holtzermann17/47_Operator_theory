@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OperatorNorm}
+\pmcreated{2013-03-22 12:43:20}
+\pmmodified{2013-03-22 12:43:20}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{operator norm}
+\pmrecord{15}{33018}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47L25}
+\pmclassification{msc}{46A32}
+\pmclassification{msc}{47A30}
+\pmsynonym{induced norm}{OperatorNorm}
+\pmrelated{VectorNorm}
+\pmrelated{OperatorTopologies}
+\pmrelated{HomomorphismsOfCAlgebrasAreContinuous}
+\pmrelated{CAlgebra}
+\pmdefines{bounded linear map}
+\pmdefines{unbounded linear map}
+\pmdefines{bounded operator}
+\pmdefines{unbounded operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\oo{\infty}
+\def\V{{\mathsf V}}
+\def\W{{\mathsf W}}
+\def\R{{\mathbb R}}
+\def\v{{\mathbf v}}
+\def\op{{\rm op}}
+\begin{document}
+\subsection*{Definition}
+
+Let $A\colon \V\to\W$ be a linear map between normed vector spaces $\V$ and
+$\W$. To each such map (operator) $A$ we can assign a non-negative number
+$\|A\|_{\op}$ defined by
+\[
+ \|A\|_{\op} := \mathop{\sup_{\v\in\V}}_{\v\ne{\bf 0}} \frac{\|A\v\|}{\|\v\|},
+\]
+where the supremum $\|A\|_{\op}$ could be finite or infinite.
+Equivalently, the above definition can be written as
+\[
+ \|A\|_\op := \mathop{\sup_{\v\in\V}}_{\|\v\|=1} \|A\v\|
+    = \mathop{\sup_{\v\in\V}}_{0<\|\v\|\le1} \|A\v\|.
+\]
+By convention, if $\V$ is the zero vector space, any operator from $\V$
+to $\W$ must be the zero operator and is assigned zero norm.
+
+$\|A\|_{\op}$ is called the the \emph{operator norm} (or the \emph{induced norm})
+of $A$, for reasons that will be clear in the next \PMlinkescapetext{section}.
+
+\subsection*{Operator norm is in fact a norm}
+
+{\bf Definition -} If $\|A\|_{\op}$ is finite, we say that $A$ is a
+\emph{\PMlinkescapetext{bounded}}. Otherwise, we say that $A$ is \emph{\PMlinkescapetext{unbounded}}.
+
+
+It turns out that, for bounded operators, $\|\cdot\|_{\op}$ satisfies all the properties of a norm
+(hence the name \emph{operator norm}). The proof follows immediately from the definition:
+
+\begin{description}
+\item[Positivity:]
+  Since $\|A\v\|\ge 0$, by definition
+  $\|A\|_\op \ge 0$. Also, $\|A\v\| = 0$ identically only if $A=0$.
+  Hence $\|A\|_\op = 0$ only if $A = 0$.
+\item[Absolute homogeneity:]
+  Since $\|\lambda A\v\|=|\lambda| \|A\v\|$, by definition
+  $\|\lambda A\|_\op = |\lambda| \|A\|_\op$.
+\item[Triangle inequality:]
+  Since $\|(A+B)\v\|=\|A\v+B\v\|\le \|A\v\| + \|B\v\|$, by definition
+  $\|A+B\|_\op \le \|A\|_\op + \|B\|_\op$.
+\end{description}
+
+The set $L(\V,\W)$ of bounded linear maps from ${\mathsf V}$ to ${\mathsf W}$ forms a vector space and $\|\cdot\|_{\op}$ defines a norm in it.
+
+
+\subsection*{Example}
+Suppose that $\V=(\R^n,\|\cdot\|_p)$ and $\W=(\R^n,\|\cdot\|_p)$, where
+$\|\cdot\|_p$ is the vector p-norm. Then the operator norm
+$\|\cdot\|_\op = \|\cdot\|_p$ is the matrix p-norm.
+%%%%%
+%%%%%
+\end{document}

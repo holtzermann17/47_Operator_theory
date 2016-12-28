@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OperatorNormOfMultiplicationOperatorOnL2}
+\pmcreated{2013-04-06 22:14:23}
+\pmmodified{2013-04-06 22:14:23}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{operator norm of multiplication operator on $L^2$}
+\pmrecord{13}{37798}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47B38}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The operator norm of the multiplication operator $M_\phi$ is the
+essential supremum of the absolute value of $\phi$.  (This may be 
+expressed as $\| M_\phi \|_\mathrm{op} = \| \phi \|_{L^\infty}$.)
+In particular, if $\phi$ is essentially unbounded, the multiplication 
+operator is unbounded.
+
+For the time being, assume that $\phi$ is essentially bounded.
+
+On the one hand, the operator norm is bounded by the essential
+supremum of the absolute value because, for any $\psi \in L^2$,
+\begin{eqnarray*}
+\| M_\phi \psi \|_{L^2} &=&  \sqrt{\int \psi(x)^2 \phi(x)^2 \,d\mu(x)} \\
+&\le& \sqrt{ (\mathrm{ess } \sup\, \phi^2) \int \psi(x)^2 \,d\mu(x)} \\
+&=&  (\mathrm{ess }\sup\, |\phi|)\,\| \psi\|_{L^2} \\
+\end{eqnarray*}
+and, hence
+\[ \| M_\phi \|_\mathrm{op} = \sup {\| M_\phi \psi \|_{L^2} \over \| \psi
+\|_{L^2}} \le (\mathrm{ess }\sup\,| \phi|).\]
+
+On the other hand, the operator norm bounds by the essential supremum
+of the absolute value .  For any $\epsilon > 0$, the measure of the
+set
+\[ A = \{ x \mid\,|\phi(x)| \ge \mathrm{ess }\sup\, |\phi| - \epsilon \} \]
+is greater than zero.  If $\mu(A) < \infty$, set $B= A$, otherwise let
+$B$ be a subset of $A$ whose measure is finite.  Then, if $\chi_B$ is
+the characteristic function of $B$, we have
+\begin{eqnarray*}
+\| M_\phi \chi_B \|_{L^2} &=&  \sqrt{\int \phi(x)^2 \chi_B(x)^2
+\,d\mu(x)} \\
+&=& \sqrt{\int_B \phi(x)^2 \,d\mu(x)} \\
+&\ge& \mu(B) (\mathrm{ess }\sup\, |\phi| - \epsilon)\\
+\end{eqnarray*}
+and, hence
+\[ \| M_\phi \|_\mathrm{op} = \sup {\| M_\phi \psi \|_{L^2} \over \|
+\psi \|_{L^2}} \ge {\| M_\phi \chi_B \|_{L^2} \over \| \chi_B
+\|_{L^2}} = \mathrm{ess }\sup\, |\phi| - \epsilon.\]
+Since this is true for every $\epsilon > 0$, we must have
+\[ \| M_\phi \|_\mathrm{op} \ge \mathrm{ess }\sup\, |\phi|.\]
+Combining with the inequality in the opposite direction,
+\[ \| M_\phi \|_\mathrm{op} = \mathrm{ess }\sup\, |\phi|.\]
+
+It remains to consider the case where $|\phi|$ is essentially
+unbounded.  This can be dealt with by a variation on the preceeding
+argument.
+
+If $\phi$ is unbounded, then $\mu (\{ x \mid\,|\phi (x)| \ge R\}) > 0$
+for all $R>0$.  Furthermore, for any $R>0$, we can find $N>R$ such
+that $\mu(A) > 0$, where
+\[A = \{ x \mid N+1 \ge |\phi (x)| \ge N\}.\]
+ If $\mu(A) < \infty$, set $B= A$, otherwise let
+$B$ be a subset of $A$ whose measure is finite.  Then, if $\chi_B$ is
+the characteristic function of $B$, we have
+\begin{eqnarray*}
+\| M_\phi \chi_B \|_{L^2} &=&  \sqrt{\int \phi(x)^2 \chi_B(x)^2
+\,d\mu(x)} \\
+&=& \sqrt{\int_B \phi(x)^2 \,d\mu(x)} \\
+&\ge& \mu(B) N\\
+\end{eqnarray*}
+and, hence
+\[ \| M_\phi \|_\mathrm{op} = \sup {\| M_\phi \psi \|_{L^2} \over \|
+\psi \|_{L^2}} \ge {\| M_\phi \chi_B \|_{L^2} \over \| \chi_B
+\|_{L^2}} = N \ge R.\]
+Since this is true for every $R$, we see that the operator norm is
+infinite, i.e. the operator is unbounded.
+
+\end{document}

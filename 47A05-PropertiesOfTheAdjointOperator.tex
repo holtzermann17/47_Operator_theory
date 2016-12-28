@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfTheAdjointOperator}
+\pmcreated{2013-03-22 13:48:14}
+\pmmodified{2013-03-22 13:48:14}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{properties of the adjoint operator}
+\pmrecord{12}{34524}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{proposition}{Proposition}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $A$ and $B$ be linear operators in a Hilbert space, 
+and let $\lambda\in \C$. Assuming all the operators involved are densely defined, the following properties hold:
+\begin{enumerate}
+\item If $A^{-1}$ exists and is densely defined, then $(A^{-1})^* = (A^*)^{-1}$;
+\item $(\lambda A)^* = \overline{\lambda}A^*$;
+\item $A\subset B$ implies $B^*\subset A^*$;
+\item $A^*+B^*\subset (A+B)^*$;
+\item $B^*A^*\subset (AB)^*$;
+\item $(A+ \lambda I)^* = A^*+\overline{\lambda}I$;
+\item $A^*$ is a closed operator.
+\end{enumerate}
+
+\textbf{Remark.} The notation $A\subset B$ for operators means that $B$ is an  \PMlinkescapetext{extension} of $A$, i.e. $A$ is the 
+\PMlinkname{restriction}{RestrictionOfAFunction} of $B$ to a smaller domain.
+
+Also, we have the following
+
+\begin{proposition}
+If $A$ admits a \PMlinkname{closure}{ClosedOperator} $\overline{A}$, then $A^*$ is densely defined and $(A^*)^* = \overline{A}$.
+\end{proposition}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KatoRellichTheorem}
+\pmcreated{2013-03-22 14:52:59}
+\pmmodified{2013-03-22 14:52:59}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Kato-Rellich theorem}
+\pmrecord{7}{36562}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A55}
+\pmsynonym{Rellich-Kato theorem}{KatoRellichTheorem}
+\pmdefines{A-bounded}
+\pmdefines{A-bound}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem*}{Theorem}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $\mathcal{H}$ be a Hilbert space, $A\colon D(A)\subset \mathcal{H}\to
+\mathcal{H}$ a self-adjoint operator and $B\colon D(B)\subset\mathcal{H}\to
+\mathcal{H}$ a symmetric operator with $D(A)\subset D(B)$.
+
+We say that $B$ is $A$-bounded if there are positive constants
+$\alpha,\beta$ such that $$\|Bx\|\leq \alpha\|Ax\|+\beta\|x\|$$ for all
+$x\in D(A)$, and we say that $\alpha$ is an \emph{$A$-bound} for $B$.
+
+\begin{theorem*}(Kato-Rellich) If $B$ is \emph{$A$-bounded} with $A$-bound smaller
+than $1$, then $A+B$ is self-adjoint on $D(A)$, and essentially
+self-adjoint on any core of $A$. Moreover, if $A$ is bounded below, then
+so is $A+B$.
+\end{theorem*}
+%%%%%
+%%%%%
+\end{document}

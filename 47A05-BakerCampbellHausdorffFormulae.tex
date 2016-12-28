@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BakerCampbellHausdorffFormulae}
+\pmcreated{2013-03-22 13:39:51}
+\pmmodified{2013-03-22 13:39:51}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Baker-Campbell-Hausdorff formula(e)}
+\pmrecord{13}{34321}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+\pmsynonym{BCH formula}{BakerCampbellHausdorffFormulae}
+\pmsynonym{Baker-Campbell-Hausdorff formula}{BakerCampbellHausdorffFormulae}
+\pmsynonym{Baker-Campbell-Hausdorff formulae}{BakerCampbellHausdorffFormulae}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a linear operator $A$, we define:
+\begin{equation}
+\exp{A} := \sum_{k=0}^{\infty} \frac{1}{k!}A^k.
+\end{equation}
+It follows that
+\begin{equation}
+\frac{\partial}{\partial \tau} e^{\tau A} = A e^{\tau A}= e^{\tau A} A.
+\end{equation}
+Consider another linear operator $B$. Let $B(\tau)=e^{\tau A} B e^{-\tau A}$. Then one can prove the following series representation for $B(\tau)$:
+\begin{equation}\label{eq:genbch}
+B(\tau)= \sum_{m=0}^{\infty} \frac{{\tau}^m}{m!}B_m,
+\end{equation}
+where $B_m =[A,B]_m := [A,[A,B]_{m-1}]$  and $B_0:=B$.
+A very important special case of eq.~(\ref{eq:genbch}) is known as the 
+{\sl Baker-Campbell-Hausdorff (BCH)} formula. Namely, for $\tau =1$ we get:
+\begin{equation}
+e^A \; B e^{-A} = \sum_{m=0}^{\infty} \frac{1}{m!} B_m.
+\end{equation}
+Alternatively, this expression may be rewritten as
+\begin{equation}
+[B,e^{-A}] = e^{-A} \left( [A,B]+\frac{1}{2} [A,[A,B]] + \cdots  
+\right),
+\end{equation}
+or 
+\begin{equation}
+[e^A,B] = \left( [A,B]+\frac{1}{2} [A,[A,B]] + \cdots  
+\right) e^A.
+\end{equation}
+There is a descendent of the BCH formula, which often is also referred to as BCH
+formula. It provides us with the multiplication law for two exponentials of linear operators: Suppose $[A,[A,B]] = [B,[B,A]] = 0$. Then,
+\begin{equation}
+e^A e^B = e^{A+B} e^{\frac{1}{2}[A,B]}.
+\end{equation}
+Thus, if we want to commute two exponentials, we get an extra factor
+\begin{equation}
+e^A e^B = e^B e^A e^{[A,B]}.
+\end{equation}
+%%%%%
+%%%%%
+\end{document}

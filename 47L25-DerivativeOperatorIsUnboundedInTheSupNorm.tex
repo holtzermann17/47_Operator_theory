@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeOperatorIsUnboundedInTheSupNorm}
+\pmcreated{2013-07-14 20:22:55}
+\pmmodified{2013-07-14 20:22:55}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{derivative operator is unbounded in the sup norm}
+\pmrecord{8}{37732}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{norm}
+\pmclassification{msc}{47L25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider $C^\infty([-1,1])$ the vector space of functions with derivatives or arbitrary order on the set $[-1,1]$.
+
+This space admits a norm called the supremum norm given by
+
+$$|f| = \sup \left\{|f(x)|: x\in [-1,1] \right\}$$
+
+This norm makes this vector space into a metric space.
+
+We claim that the derivative operator $D: (Df)(x) = f'(x)$ is an unbounded operator.
+
+
+All we need to prove is that there exists a succession of functions $f_n\in C^\infty([-1,1])$ such that $\frac{|D(f_n)|}{|f_n|}$ is divergent as $n \to \infty$
+
+consider
+
+$$f_n (x) = \exp(-n^4 x^2)$$
+
+$$(Df_n)(x) = -2x n^4  \exp(-n^4 x^2)$$
+
+Clearly $|f_n| = f_n(0) = 1$
+
+To find $|Df_n|$ we need to find the extrema of the derivative of $f_n$, to do that calculate the second derivative and equal it to zero. However for the task at hand a crude estimate will be enough.
+
+$$ |Df_n| \ge |(Df_n)(\frac{1}{n^2})| = \frac{2n^2}{e}$$
+
+So we finally get
+
+$$\frac{|Df_n|}{|f_n|} \ge \frac{2n^2}{e}$$
+
+showing that the derivative operator is indeed unbounded since $\frac{2n^2}{e}$ is divergent as $n \to \infty$.
+%%%%%
+%%%%%
+\end{document}

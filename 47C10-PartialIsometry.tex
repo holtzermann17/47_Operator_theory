@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialIsometry}
+\pmcreated{2013-03-22 15:50:50}
+\pmmodified{2013-03-22 15:50:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{partial isometry}
+\pmrecord{7}{37830}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47C10}
+\pmdefines{unitary element}
+\pmdefines{initial projection}
+\pmdefines{final projection}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Partial isometry is a generalization of an isometry.  Before defining what a partial isometry is, let's recall two familiar concepts in linear algebra: an isometry and the adjoint of a linear map.
+
+\begin{enumerate}
+\item An isometry $T$ is a linear automorphism over an inner product space $V$ which preserves the inner product of any two vectors: $\langle x,y\rangle = \langle Tx, Ty\rangle$.  
+\item The adjoint $T^*$ of a linear transformation $T$ is linear transformation such that $\langle Tx,y\rangle = \langle x, T^*y\rangle$, for any pair of vectors $x,y\in V$.
+
+\end{enumerate}
+If $V$ is non-singular with respect to the inner product $\langle \cdot,\cdot \rangle$ and that the adjoint $T^*$ of a linear transformation $T$ exists, it is not hard to show that 
+\begin{quote}
+$T$ is an isometry if and only if $TT^*=I=T^*T$.
+\end{quote}
+In other words, $T^*$ is the inverse of $T$.
+
+More generally, in a ring with involution $*$, an isometry (or an unitary element) is a unit (both a left unit and a right unit) $a$ whose product with its adjoint $a^*$ is 1 (i.e. its inverse is its adjoint).  Now, if $a$ is not a unit, this product $aa^*$ 
+will not be 1.  The next best thing to hope for is that the product will be an idempotent.  But because $aa^*$ is self-adjoint, this idempotent is in fact a projection.  This is how a partial isometry is defined.  Formally, 
+\begin{quote}
+let $R$ be a ring with involution $*$, an element $a\in R$ is a \emph{partial isometry} if $aa^*$ and $a^*a$ are both projections.
+\end{quote}
+
+Given a partial isometry $a$, the projections $a^*a$ and $aa^*$ are respectively called the \emph{initial projection} and \emph{final projection} of $a$.
+
+\textbf{Examples}.  Under this definition, $0$ is a partial isometry, and so is any isometry.  
+
+This definition can be readily applied to specific (more familiar) situations.  For example, if the ring in question is the ring of linear endomorphisms over a Euclidean space (real or complex), then a partial isometry is just a map such that its restriction to the complementary subspace of its kernel is an isometry.  If we look at the case when the space is 3 dimensional over the reals, and taking the standard basis, the matrix
+
+\begin{center}$A =
+\begin{pmatrix}
+0 & 0 & 0 \\
+0 & \sin\theta & -\cos\theta \\
+0 & \cos\theta & \sin\theta
+\end{pmatrix}$
+\end{center}
+
+corresponds to a partial isometry whose kernel is a line $L$.  Its restriction to the complement of $L$ corresponds to the matrix
+
+\begin{center}$B =
+\begin{pmatrix}
+\sin\theta & -\cos\theta \\
+\cos\theta & \sin\theta
+\end{pmatrix}$,
+\end{center}
+
+which is an isometry (rotation).
+
+\textbf{Remark}.  If the ring $R$ is a Baer *-ring, an element $a$ is a partial isometry iff $aa^*a=a$ (so $a^*aa^*=a^*$; $a$ and $a^*$ are generalized inverses of one another).
+%%%%%
+%%%%%
+\end{document}

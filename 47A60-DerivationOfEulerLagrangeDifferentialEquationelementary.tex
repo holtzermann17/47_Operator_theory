@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfEulerLagrangeDifferentialEquationelementary}
+\pmcreated{2013-03-22 14:45:35}
+\pmmodified{2013-03-22 14:45:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivation of Euler-Lagrange differential equation (elementary)}
+\pmrecord{16}{36401}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $[e,c]$ be a finite subinterval of $(a,b)$.  Let the function $h \colon \mathbb{R} \to \mathbb{R}$ be chosen so that a) $h$ is twice differentiable, b) $h(t) = 0$ when $t \notin [e,c]$, c) $h(t) > 0$ when $t \in (e,c)$, and d) $\int_e^c h(t) \, dt = 1$.
+
+Choose $f(\lambda,t) = q(t) + \lambda h (t)$.  It is easy to see that this function satisfies the requirements for $f$ laid out in the main entry.  Then, we can write
+ $$g(\lambda, x) = \int_a^b L (t, q(t) + \lambda h (t), \dot{q}(t) + \lambda \dot{h} (t)) \, dt$$
+
+Let us split the integration into three parts --- the integral from $a$ to $e$, the integral from $e$ to $c$, and the integral from $c$ to $b$.  By the way $h$ was chosen, the integrand reduces to $L (t, q(t) (t), \dot{q}(t))$ when $t \in (a,e)$ or $t \in (c,b)$.  Hence the pieces of the integral over the intervals $(a,e)$ and $(c,b)$ do not depend on $\lambda$ and we have
+ $${dg \over d\lambda} = {d \over d\lambda} \int_e^c L (t, q(t) + \lambda h (t), \dot{q}(t) + \lambda \dot{h} (t)) \, dt$$
+
+Since $[e,c]$ is closed and bounded, it is compact.  By our assumption, the derivative of the integrand is continuous.  Since continuous functions on compact sets are uniformly continuous, the derivative of the integrand is uniformly continuous.  This imples that it is permissible to interchange differentiation and integration:
+ $${dg \over d\lambda} = \int_e^c {d \over d\lambda} L (t, q(t) + \lambda h (t), \dot{q}(t) + \lambda \dot{h} (t)) \, dt$$
+Using the chain rule (several variables) and setting $\lambda = 0$, we have
+ $${dg \over d\lambda} \bigg|_{\lambda = 0} = \int_e^c h (t) {\partial L  \over \partial q} (t, q(t),\dot{q}(t)) + \dot{h} (t) \frac{\partial L}{\partial \dot{q}} (t, q(t),\dot{q}(t)) \quad dt$$
+Integrating by parts and using the fact that $h$ was chosen so as to vanish at the endpoints $e$ qnd $c$, we find that
+ $${dg \over d\lambda} \bigg|_{\lambda = 0} = \int_e^c h (t) \left[ {\partial L  \over \partial q} (t, q(t),\dot{q}(t)) - {d \over d t} \left( \frac{\partial L}{\partial \dot{q}} (t, q(t),\dot{q}(t)) \right) \right] \quad dt = \int_e^c h (t) EL(t) \, dt$$
+(The last equals sign defines $EL$ as the quantity in the brackets in the first integral.)
+
+I claim that requiring $dg / d\lambda = 0$ for all finite intervals $[e,c] \subset (a,b)$ implies that the $EL(t)$ must equal zero for all $t \in [a,b]$.  By our assumptions, $EL$ is a continuous function.  Hence, for every $t_0 \in (a,b)$ and every $\epsilon > 0$, there must exist and $[e,c] \subset (a,b)$ such that $t_0 \in [e,c]$ and $t_1 \in [e,c]$ implies that $|EL(t_0) - EL(t_1)| < \epsilon$.  Therefore,
+ $$\left| \quad {dg \over d\lambda} \bigg|_{\lambda = 0} - EL(t_0) \right| = \left| \int_e^c h (t) \left( EL(t) - EL(t_0) \right) \, dt \right| < \epsilon \left| \int_e^c h (t) \, dt \right| = \epsilon$$
+Since this must be true for all $\epsilon > 0$, it follows that $EL(t_0) = 0$ for all $t_0 \in (a,b)$.  In other words, q satisfies the Euler-Lagrange equation.
+%%%%%
+%%%%%
+\end{document}

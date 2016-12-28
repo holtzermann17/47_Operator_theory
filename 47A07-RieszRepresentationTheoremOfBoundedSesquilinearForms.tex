@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RieszRepresentationTheoremOfBoundedSesquilinearForms}
+\pmcreated{2013-03-22 18:41:38}
+\pmmodified{2013-03-22 18:41:38}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Riesz representation theorem of bounded sesquilinear forms}
+\pmrecord{10}{41454}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A07}
+\pmclassification{msc}{46C05}
+\pmsynonym{Riesz lemma on bounded sesquilinear forms}{RieszRepresentationTheoremOfBoundedSesquilinearForms}
+\pmsynonym{correspondence between bounded operators and bounded sesquilinear forms}{RieszRepresentationTheoremOfBoundedSesquilinearForms}
+\pmdefines{bounded sesquilinear form}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{bounded}
+
+\section*{Bounded sesquilinear forms}
+
+Let $H_1$, $H_2$ be two Hilbert spaces.
+
+{\bf Definition -} A sesquilinear form $[\cdot, \cdot ] : H_1 \times H_2 \to \mathbb{C}$ is said to be \emph{bounded} if there is a constant $C \geq 0$ such that
+
+\begin{align*}
+[\xi, \eta ] \leq C \| \xi \| \| \eta \|
+\end{align*}
+for all $\xi \in H_1$ and $\eta \in H_2$.
+
+Bounded sesquilinear forms are precisely those which are continuous from $H_1 \times H_2$ to $\mathbb{C}$.
+
+{\bf Examples :}
+
+\begin{itemize}
+\item When $H_1$ and $H_2$ are the same Hilbert space, denoted by $H$, the inner product $\langle \cdot, \cdot \rangle$ in $H$ is itself a bounded sesquilinear form. The boundedness condition follows from the Cauchy-Schwarz inequality.
+\item Let $T: H_1 \to H_2$ be a bounded linear operator and denote by $\langle \cdot, \cdot \rangle$ the inner product in $H_2$. The function $[\cdot, \cdot ] : H_1 \times H_2 \to \mathbb{C}$ defined by
+\begin{align*}
+[\xi, \eta ] := \langle T \xi, \eta \rangle
+\end{align*}
+is a bounded sesquilinear form. The boundedness condition follows from the Cauchy-Schwarz inequality and the fact that $T$ is bounded.
+\end{itemize}
+
+\section*{Riesz representation of bounded sesquilinear forms}
+
+The second example above is in fact the general case. To every bounded sesquilinear form one can associate to it a unique bounded operator. That is content of the following result:
+
+{\bf Theorem - Riesz \PMlinkescapetext{Representation} -} Let $H_1$, $H_2$ be two Hilbert spaces and denote by $\langle \cdot, \cdot \rangle$ the inner product in $H_2$. For every bounded sesquilinear form $[\cdot, \cdot]: H_1 \times H_2 \to \mathbb{C}$ there is a unique bounded linear operator $T: H_1 \to H_2$ such that
+
+\begin{align*}
+[\xi, \eta ] = \langle T \xi , \eta \rangle\,, \qquad\qquad \xi \in H_1, \eta \in H_2.
+\end{align*}
+
+Thus, there is a correspondence between bounded linear operators and bounded sesquilinear forms. Actually, in the early twentieth century, spectral theory was formulated solely in terms of sesquilinear forms on Hilbert spaces. Only later it was realized that this could be achieved, perhaps in a more intuitive manner, by considering linear operators instead. The linear operator approach has its advantages, as for example one can define the composition of linear operators but not of sesquilinear forms. Nevertheless it is many times useful to define a linear operator by specifying its sesquilinear form.
+%%%%%
+%%%%%
+\end{document}

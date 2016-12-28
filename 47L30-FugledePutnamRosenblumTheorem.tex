@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FugledePutnamRosenblumTheorem}
+\pmcreated{2013-05-08 21:47:27}
+\pmmodified{2013-05-08 21:47:27}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{Fuglede-Putnam-Rosenblum theorem}
+\pmrecord{1}{}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Theorem}
+\pmclassification{msc}{47L30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $A$ be a $C^{\ast}$-algebra with unit $e$.
+
+The Fuglede-Putnam-Rosenblum theorem makes the assertion that for a normal element $a \in A$ the kernel of the commutator mapping $[a, -] \colon A \to A$ is a $\ast$-closed set. 
+
+The general formulation of the result is as follows:
+
+\textbf{Theorem.} Let $A$ be a $C^{\ast}$-algebra with unit $e$. Let two normal elements
+$a, b \in A$ be given and $c \in A$ with $ac = cb$. 
+Then it follows that $a^{\ast} c = c b^{\ast}$. 
+
+\textbf{Lemma.} For any $x \in A$ we have that $\exp(x - x^{\ast})$ is a element of $A$.
+
+\textbf{Proof.} We have for $x \in A$ that
+$\exp(x - x^{\ast})^{\ast} \exp(x - x^{\ast}) = \exp(x^{\ast} - x + x - x^{\ast}) = \exp(0) = e$.
+And similarly $\exp(x - x^{\ast}) \exp(x - x^{\ast})^{\ast} = e$. \qed
+
+With this we can now give a proof the Theorem.
+
+\textbf{Proof.} The condition $ac = cb$ implies by induction that $a^k c = c b^k$ holds for each $k \in \mathbb{N}$.
+Expanding in power series on both sides yields $\exp(a) c = c \exp(b)$.
+This is equivalent to $c = \exp(-a) c \exp(b)$. Set $U_1 := \exp(a^{\ast} - a), U_2 := \exp(b - b^{\ast})$. From the Lemma we obtain that $\|U_1\|_A = \|U_2\|_A = 1$. 
+Since $a$ commutes with $a^{\ast}$ und $b$ with $b^{\ast}$ we obtain that
+\[
+\exp(a^{\ast}) c \exp(-b^{\ast}) = \exp(a^{\ast}) \exp(-a) c \exp(b) \exp(b^{\ast})
+\]
+
+which equals $\exp(a^{\ast} - a) c \exp(b - b^{\ast}) = U_1 c U_2$. 
+
+Hence 
+\[
+\|\exp(a^{\ast}) c \exp(-b^{\ast})\| \leq \|c\|.
+\]
+
+Define $f \colon \mathbb{C} \to A$ by $f(\lambda) := \exp(\lambda a^{\ast}) c \exp(-\lambda b^{\ast})$. If we substitute $a \mapsto \lambda a, b \mapsto \lambda b$ in the last estimate we obtain
+\[
+\|f(\lambda)\| \leq \|c\|, \ \lambda \in \mathbb{C}. 
+\]
+
+But $f$ is clearly an entire function and therefore Liouville's theorem implies that $f(\lambda) = f(0) = c$ for each $\lambda$. 
+
+This yields the equality
+\[
+c \exp(\lambda b^{\ast}) = \exp(\lambda a^{\ast}) c.
+\]
+
+Comparing the terms of first order for $\lambda$ small finishes the proof. \qed
+
+
+\end{document}

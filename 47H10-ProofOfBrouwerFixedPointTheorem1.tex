@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBrouwerFixedPointTheorem1}
+\pmcreated{2013-03-22 18:13:24}
+\pmmodified{2013-03-22 18:13:24}
+\pmowner{uriw}{288}
+\pmmodifier{uriw}{288}
+\pmtitle{proof of Brouwer fixed point theorem}
+\pmrecord{4}{40808}
+\pmprivacy{1}
+\pmauthor{uriw}{288}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47H10}
+\pmclassification{msc}{54H25}
+\pmclassification{msc}{55M20}
+
+\usepackage{amsmath, amsthm, amssymb}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+
+\begin{document}
+The $n$-dimensional simplex $\mathcal{S}_n$ is the following
+subset of $\mathbb{R}^{n+1}$
+\[
+\left\{(\alpha_1,\alpha_2,\ldots,\alpha_{n+1}) \, \Big| \,
+\sum_{i=1}^{n+1}\alpha_i=1, \quad \alpha_i\geq0 \quad \forall
+i=1,\ldots,n+1\right\}
+\]
+
+Given an element $x=\sum_i\alpha_i e_i\in\mathcal{S}_n$ we denote
+$[x]_i=\alpha_i$ (i.e., the $i$-th barycentric coordinate). We
+also denote $F(x)=\{\, i\, |\, [x]_i \neq 0\}$. An $I$-face of
+$\mathcal{S}_n$ is the subset $\{\, x\, |\, F(x)\subseteq I \}$.
+
+As was noted in the statement of the theorem, the 'shape' is
+unimportant. Therefore, we will prove the
+following variant of the theorem using the KKM lemma.
+
+\begin{theorem}[Brouwer's Fixed Point Theorem]
+Let $f:\mathcal{S}_n\to\mathcal{S}_n$ be a continuous function.
+Then, $f$ has a fixed point, namely, there is an
+$L\in\mathcal{S}_n$ such that $L=f(L)$.
+\end{theorem}
+\begin{proof}
+Clearly, $\sum_{i=1}^n [y]_i = 1$ for any $y\in\mathcal{S}_n$ and
+$L=f(L)$ if and only if $[L]_i = [f(L)]_i$ for all
+$i=1,2,\ldots,n+1$. For each $i=1,2,\ldots, n+1$ we define the
+following subset $C_i$ of $\mathcal{S}_n$:
+\[
+C_i = \left\{x\in\mathcal{S}_n \,\Big|\, [x]_i\geq[f(x)]_i\right\}
+\]
+We claim that if $x$ is in some $I$-face of $\mathcal{S}_n$
+($I\subseteq\{1,2,\ldots,n+1\}$) then there is an index $i\in I$
+such that $x \in C_i$. Indeed, if $x$ is in some $I$-face then
+$F(v) \subseteq I$. Thus, if $[x]_i \neq 0$ then $i\in I$. This
+shows that
+\[
+\sum_{i\in I} [x]_i = 1
+\]
+Assuming by contradiction that $x\not\in C_i$ for all $i\in I$
+implies that $[x]_i < [f(x)]_i$ for all $i\in I$. But this leads
+to a contradiction as the following inequality shows:
+\[
+1 = \sum_{i\in I} [x]_i < \sum_{i\in I} [f(x)]_i \leq \sum_{i=1}^n
+[f(x)]_i = 1
+\]
+This dicussion establishes that each $I$-face is contained in the
+union $\cup_{i\in I} C_i$. In addition, the subsets $C_i$ are all
+closed. Therefore, we have shown that the hypothesis of the KKM
+Lemma holds.
+
+By the KKM lemma there is a point $L$ that is in every $C_i$ for
+$i=1,2,\ldots,n+1$. We claim that $L$ is a fixed point of $f$.
+Indeed, $[L]_i\geq[f(L)]_i\geq0$ for all $i=1,2,\ldots,n+1$ and
+thus:
+\[
+1 = [L]_1 + [L]_2 + \cdots + [L]_{n+1} \geq [f(L)]_1 + [f(L)]_2 +
+\cdots + [f(L)]_{n+1} = 1
+\]
+Therefore, $[L]_i=[f(L)]_i$ for all $i=1,2,\ldots,n+1$ which
+implies that $L=f(L)$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

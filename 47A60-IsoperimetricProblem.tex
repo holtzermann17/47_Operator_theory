@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsoperimetricProblem}
+\pmcreated{2013-03-22 19:12:01}
+\pmmodified{2013-03-22 19:12:01}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{isoperimetric problem}
+\pmrecord{9}{42115}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+\pmclassification{msc}{49K22}
+\pmrelated{IsoperimetricInequality}
+\pmrelated{LagrangeMultiplier}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The simplest of the isoperimetric problems is the following:
+
+\emph{One must set an arc with a given length $l$ from a given point $P$ of the plane to another given point $Q$ such that the arc together with the line segment $PQ$ encloses the greatest area possible.}
+
+This task is solved in the entry example of calculus of variations.\\
+
+
+More generally, \emph{isoperimetric problem} may \PMlinkescapetext{mean} determining such an arc $c$ between the given points $P$ and $Q$ that it gives for the integral
+\begin{align}
+\int_P^Q\!f(x,\,y,\,y')\,ds
+\end{align}
+an extremum and that gives for another integral
+\begin{align}
+\int_P^Q\!g(x,\,y,\,y')\,ds
+\end{align}
+a given value $l$, as both integrals are taken along $c$.\, Here, $f$ and $g$ are given functions.\\
+
+
+The constraint (2) can be omitted by using the function $f\!-\!\lambda g$ instead of $f$ in (1) similarly as in the mentionned example. 
+
+%%%%%
+%%%%%
+\end{document}

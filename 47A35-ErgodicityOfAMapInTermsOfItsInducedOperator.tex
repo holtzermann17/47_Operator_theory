@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ErgodicityOfAMapInTermsOfItsInducedOperator}
+\pmcreated{2013-03-22 17:59:22}
+\pmmodified{2013-03-22 17:59:22}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{ergodicity of a map in terms of its induced operator}
+\pmrecord{6}{40500}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A35}
+\pmclassification{msc}{37A30}
+\pmclassification{msc}{37A25}
+\pmclassification{msc}{28D05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $(X, \mathfrak{B}, \mu)$ be a probability space and $T:X \longrightarrow X$ a measure-preserving transformation. The following statements are equivalent:
+
+\begin{enumerate}
+\item - $T$ is ergodic.
+\item - If $f$ is a measurable function and $f\circ T =f$ \PMlinkname{a.e.}{AlmostSurely}, then $f$ is constant a.e.
+\item - If $f$ is a measurable function and $f\circ T \geq f$ a.e., then $f$ is constant a.e.
+\item - If $f \in L^2(X)$ and $f\circ T =f$ a.e., then $f$ is constant a.e..
+\item - If $f \in L^p(X)$, with $p \geq 1$, and $f\circ T =f$ a.e., then $f$ is constant a.e.
+\end{enumerate}
+
+$\,$
+
+Let $U_T$ denote the \PMlinkname{operator induced by $T$}{OperatorInducedByAMeasurePreservingMap}, i.e. the operator defined by $U_T f:= f \circ T$. The statements above are statements about $U_T$. The above theorem can be rewritten as follows:
+
+$\,$
+
+{\bf Theorem -} Let $(X, \mathfrak{B}, \mu)$ be a probability space and $T:X \longrightarrow X$ a measure-preserving transformation. The following statements are equivalent:
+
+\begin{enumerate}
+\item - $T$ is ergodic.
+\item - The only fixed points of $U_T$ are the functions that are constant a.e.
+\item - If $f$ a measurable function and $U_T f \geq f$ a.e., then $f$ is constant a.e.
+\item - The eigenspace of $U_T$ (seen as an operator in $L^p(X)$, with $p \geq 1$) associated with the eigenvalue $1$, is one-dimensional and consists of functions that are constant a.e.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

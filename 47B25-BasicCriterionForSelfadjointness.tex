@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BasicCriterionForSelfadjointness}
+\pmcreated{2013-03-22 14:53:02}
+\pmmodified{2013-03-22 14:53:02}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{basic criterion for self-adjointness}
+\pmrecord{5}{36563}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47B25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $A\colon D(A)\subset \mathscr{H}\to \mathscr{H}$ be a symmetric operator on a Hilbert space. The following are equivalent:
+\begin{enumerate}
+\item $A=A^*$ (i.e $A$ is self-adjoint);
+\item $\operatorname{Ker}(A^* \pm i) = \{0\}$ and $A$ is closed;
+\item $\operatorname{Ran}(A \pm i) = \mathscr{H}$.
+\end{enumerate}
+
+\emph{Remark:} $A+\lambda$ represents the operator $A+\lambda I\colon D(A)\subset \mathscr{H}\to \mathscr{H}$, and $\operatorname{Ker}$ and $\operatorname{Ran}$ stand for kernel and range, respectively.
+
+A similar version for essential self-adjointness is an easy corollary of the above. The following are equivalent:
+
+\begin{enumerate}
+\item $\overline A=A^*$ (i.e. $A$ is essentially self-adjoint);
+\item $\operatorname{Ker}(A^*\pm i) = \{0\}$;
+\item $\operatorname{Ran}(A \pm i)$ is dense in $\mathscr{H}$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

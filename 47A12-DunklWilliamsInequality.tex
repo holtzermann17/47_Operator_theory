@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DunklWilliamsInequality}
+\pmcreated{2013-03-22 16:56:38}
+\pmmodified{2013-03-22 16:56:38}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Dunkl-Williams inequality}
+\pmrecord{12}{39212}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $V$ be an inner product space and $a,b \in V$. If $a \not = 0$ and $b \not = 0$, then 
+\begin{equation}
+\Vert  a -b \Vert \ge \frac{1}{2}(  \Vert a   \Vert + \Vert b \Vert ) \Vert \frac{a}{\Vert a \Vert} - \frac{b}{\Vert b \Vert} \Vert .
+\end{equation}
+Equality holds if and only if $a=0$, $b=0$, $\Vert a \Vert = \Vert b \Vert$ 
+or $a \Vert b \Vert = b \Vert a \Vert $.
+In fact, if (1) holds
+and $V$ is a normed linear space, then $V$ is an inner product space.
+
+If $X$ is a normed linear space and $a \not =0$ and $b \not = 0$ then
+\begin{equation}
+\Vert  a -b \Vert \ge \frac{1}{4}(  \Vert a   \Vert + \Vert b \Vert ) \Vert \frac{a}{\Vert a \Vert} - \frac{b}{\Vert b \Vert} \Vert .
+\end{equation}
+Equality holds if and only if $a=0$,  $b=0$ or $a=b$.
+The constant $\frac{1}{4}$ is best possible. For example, let  $X$ be  the set of  ordered pairs of real numbers,
+with norm of $(x_1, x_2)$ equal to $\vert x_1 \vert  + \vert x_2 \vert.$ Let
+$a=(1, \epsilon)$ and $b=(1,0)$ where $\epsilon$ is a small positive number. After a bit 
+of routine calculation, it is easily seen that the best possible constant is $\frac{1}{4}$.
+
+The inequality (2) has been generalized in the case where $X$ is a normed linear space
+over the reals.  In that case one can show:
+\begin{equation}
+\Vert  a -b \Vert \ge c_p  (  \Vert a   \Vert^p + \Vert b \Vert^p )^{1/p} \Vert \frac{a}{\Vert a \Vert} - \frac{b}{\Vert b \Vert} \Vert 
+\end{equation}
+where $c_p = 2^{-1-1/p}$ if $0 < p \le 1$ and $c_p = 1/4$ if $p \ge 1$. The case $p=1$ is the
+Dunkl and Williams inequality. 
+
+If $X$ is a normed linear space  and $0 < p \le 1$ then (3) holds with $c_p = 2^{-1/p}$ 
+if and only if $X$ is an inner product space.
+
+The inequality (2) can be improved slightly to get:
+\begin{equation}
+\Vert  a -b \Vert \ge \frac{1}{2} \max(\Vert a \Vert, \Vert b \Vert)  \Vert \frac{a}{\Vert a \Vert} - \frac{b}{\Vert b \Vert} \Vert .
+\end{equation}
+Equality holds in (4) if and only if $a$ and $b$ span an ${\ell_2}^1$ in the underlying real vector space with
+$\pm\Vert b-a\Vert^{-1}(b-a)$ and $\pm\Vert a\Vert^{-1}a$ (or $\pm\Vert b\Vert^{-1}b$) as the vertices of the unit
+parallelogram.
+
+
+
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{DW} C.F. Dunkl, K.S. Williams, \emph{A simple norm inequality}. Amer. Math. Monthly, \textbf{71} (1) (1964) 53-54.
+\bibitem{KS} W.A. Kirk, M.F.  Smiley, \emph{Another characterization of inner product spaces}, Amer. Math. Monthly,
+\textbf{71}, (1964), 890-891.
+\bibitem{AMA} A.M. Alrashed, \emph{Norm inequalities and Characterizations of Inner Product Spaces},
+J. Math. Anal. Appl. \textbf{176}, (2) (1993), 587-593.
+\bibitem{MS} J.L. Massera, J.J. Sch\"affer, \emph{Linear differential equations and functional analysis}, Annals of Math. \textbf{67} (2)(1958), 517-573. (on page 538)
+\bibitem{LMK)}
+L.M. Kelly, \emph{The Massera-Sch\"aeffer equality}, Amer. Math. Monthly, \textbf{73}, (1966) 1102-1103.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

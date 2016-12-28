@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceOfAdjointsOfBoundedOperators}
+\pmcreated{2013-03-22 17:33:44}
+\pmmodified{2013-03-22 17:33:44}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{existence of adjoints of bounded operators}
+\pmrecord{4}{39971}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+\pmsynonym{bounded operators have (bounded) adjoints}{ExistenceOfAdjointsOfBoundedOperators}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{mathrsfs}
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{bounded}
+
+Let $\mathscr{H}$ be a Hilbert space and let $T: \mathscr{D}(T)\subset \mathscr{H}\longrightarrow \mathscr{H}$ be a densely defined linear operator.
+
+{\bf Theorem - } If $T$ is \PMlinkname{bounded}{ContinuousLinearMapping} then its adjoint $T^*$ is everywhere defined and is also bounded.
+
+{\bf Proof :} Since $T$ is densely defined and bounded, it extends uniquely to a bounded (everywhere defined) linear operator on $\mathscr{H}$, which we denote by $\widetilde{T}$.
+
+For each $z \in \mathscr{H}$, the function $f: \mathscr{H} \longrightarrow \mathbb{C}$ defined by 
+$f(x)=\langle \widetilde{T}x, z\rangle$ defines a bounded linear functional on $\mathscr{H}$. By the Riesz representation theorem there exists $u \in \mathscr{H}$ such that
+
+\begin{displaymath}
+f(x) = \langle x, u \rangle
+\end{displaymath}
+
+i.e.
+
+\begin{displaymath}
+\langle \widetilde{T}x, z\rangle = \langle x, u \rangle .
+\end{displaymath}
+
+Since $\widetilde{T}$ extends $T$, we also have that for every $z \in \mathscr{H}$ there exists $u \in \mathscr{H}$ such that
+
+\begin{displaymath}
+\langle Tx, z\rangle = \langle x, u\rangle \;\;\text{for every}\; x \in \mathscr{D}(T) .
+\end{displaymath}
+
+We conclude that $T^*$ is everywhere defined. To see that it is bounded one just needs to check that
+
+\begin{displaymath}
+\sup_{z\neq 0} \frac{\|T^*z\|}{\|z\|} = \sup_{\substack{z\neq 0 \\ T^*z \neq 0}}\; \frac{|\langle T^*z, T^*z \rangle |}{\|T^*z\| \|z\|} \leq \sup_{\substack{z \neq  0 \\ x \neq 0}}\; \frac{|\langle x, T^*z \rangle |}{\|x\| \|z\|} =
+\sup_{\substack{z \neq  0 \\ x \neq 0}}\; \frac{|\langle Tx, z \rangle |}{\|x\| \|z\|} \leq \|T\|
+\end{displaymath}
+
+where the last inequality comes from the Cauchy-Schwarz inequality and the fact that $T$ is bounded. $\square$
+
+{\bf Remark -} This theorem shows in particular that bounded linear operators $T : \mathscr{H} \longrightarrow \mathscr{H}$ have bounded adjoints $T^* : \mathscr{H} \longrightarrow \mathscr{H}$.
+%%%%%
+%%%%%
+\end{document}

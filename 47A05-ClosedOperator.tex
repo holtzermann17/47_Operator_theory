@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosedOperator}
+\pmcreated{2013-03-22 13:48:20}
+\pmmodified{2013-03-22 13:48:20}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{closed operator}
+\pmrecord{9}{34526}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+\pmsynonym{closed}{ClosedOperator}
+\pmdefines{closure}
+\pmdefines{closable}
+\pmdefines{core}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $B$ be a Banach space. 
+A linear operator $A\colon\mathscr{D}(A)\subset B\to B$ is said to be \PMlinkescapetext{\textbf{closed}} if
+for every sequence $\{x_n\}_{n\in \N}$ in $\mathscr{D}(A)$ converging to $x\in B$ such that $Ax_n\xrightarrow[n\to\infty]{} y\in B$, it holds $x\in\mathscr{D}(A)$ and $Ax = y$. 
+Equivalently, $A$ is closed if its graph is closed in $B\oplus B$.
+
+Given an operator $A$, not necessarily closed, if the closure of its graph in $B\oplus B$ happens to be the graph of some operator, we call that operator the \textbf{closure} of $A$, and we say that $A$ is \textbf{closable}. We denote the closure of $A$ by $\overline{A}$. It follows easily that $A$ is the restriction of $\overline{A}$ to $\mathscr{D}(A)$. 
+
+A \textbf{core} of a closable operator is a subset $\mathscr{C}$ of $\mathscr{D}(A)$ such that the closure of the restriction of $A$ to $\mathscr{C}$ is $\overline{A}$.
+
+The following properties are easily checked:
+\begin{enumerate}
+\item Any bounded linear operator defined on the whole space $B$ is closed;
+\item If $A$ is closed then $A-\lambda I$ is closed;
+\item If $A$ is closed and it has an inverse, then $A^{-1}$ is also closed;
+\item An operator $A$ admits a closure if and only if for every pair of sequences $\{x_n\}$ and $\{y_n\}$ in $\mathscr{D}(A)$, both converging to $z\in B$, and such that both $\{Ax_n\}$ and $\{Ay_n\}$ converge, it holds $\lim_n Ax_n = \lim_n Ay_n$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

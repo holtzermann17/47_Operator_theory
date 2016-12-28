@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResolventMatrix}
+\pmcreated{2013-03-22 13:36:20}
+\pmmodified{2013-03-22 13:36:20}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{resolvent matrix}
+\pmrecord{8}{34235}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A10}
+\pmclassification{msc}{15A15}
+\pmdefines{resolvent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{resolvent matrix} of a matrix $A$ is defined as
+\[
+R_{A}(s)=(sI-A)^{-1}.
+\]
+
+Note: $I$ is the identity matrix and $s$ is a complex variable. Also note that $R_{A}(s)$ is undefined on $Sp(A)$ (the spectrum of $A$).
+
+More generally, let $A$ be a unital algebra over the field of complex numbers $\mathbb{C}$.  The \emph{resolvent} $R_x$ of an element $x\in A$ is a function from $\mathbb{C}-Sp(x)$ to $A$ given by
+\[
+R_x(s)=(s\cdot 1-x)^{-1}
+\]
+where $Sp(x)$ is the spectrum of $x$: $Sp(x)=\lbrace t\in \mathbb{C}\mid t\cdot 1 -x\mbox{ is not invertible in }A\rbrace$.
+
+If $A$ is commutative and $s\notin Sp(x)\cup Sp(y)$, then $R_x(s)-R_y(s)=R_x(s)R_y(s)(x-y)$.
+%%%%%
+%%%%%
+\end{document}

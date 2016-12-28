@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnyTopologicalSpaceWithTheFixedPointPropertyIsConnected}
+\pmcreated{2013-03-22 13:56:35}
+\pmmodified{2013-03-22 13:56:35}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{any topological space with the fixed point property is connected}
+\pmrecord{12}{34705}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47H10}
+\pmclassification{msc}{54H25}
+\pmclassification{msc}{55M20}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\renewcommand{\emptyset}{\varnothing}
+\begin{document}
+\PMlinkescapeword{property}
+
+{\bf Theorem}
+Any topological space with the \PMlinkname{fixed-point property}{FixedPointProperty} is connected.
+
+{\bf Proof.}
+We will prove the contrapositive.
+Suppose $X$ is a topological space which is not connected.
+So there are non-empty disjoint open sets $A,B\subseteq X$ such
+that $X=A\cup B$. Then there are elements $a\in A$ and $b\in B$, and
+we can define a function $f\colon X\to X$ by
+$$ f(x) = \left\{ \begin {array}{ll} a, & \mbox{when} \, x\in B, \\
+ b, & \mbox{when} \, x\in A. \\
+ \end{array} \right. $$
+Since $A\cap B=\emptyset$ and $A\cup B=X$, the function $f$ is well-defined.
+Also, $a\notin B$ and $b\notin A$, so $f$ has no fixed point.
+Furthermore, if $V$ is an open set in $X$, a short calculation shows that
+$f^{-1}(V)$ is $\emptyset, A,B$ or $X$, all of which are open sets.
+So $f$ is continuous, and therefore $X$ does not have the fixed-point property.
+$\Box$
+
+\begin{thebibliography}{9}
+ \bibitem{jameson} G.J. Jameson, \emph{Topology and Normed Spaces},
+ Chapman and Hall, 1974.
+\bibitem{ward} L.E. Ward, \emph{Topology, An Outline for a First Course},
+Marcel Dekker, Inc., 1972.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

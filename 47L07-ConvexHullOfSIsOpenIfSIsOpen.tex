@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvexHullOfSIsOpenIfSIsOpen}
+\pmcreated{2013-03-22 13:44:47}
+\pmmodified{2013-03-22 13:44:47}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{convex hull of $S$ is open if $S$ is open}
+\pmrecord{9}{34443}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47L07}
+\pmclassification{msc}{46A55}
+
+\usepackage{graphicx}
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\renewcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+ \newcommand{\cull}[0]{\operatorname{co}}
+\begin{document}
+{\bf Theorem} 
+If $S$ is an open set in a topological vector space, then 
+the convex hull $\cull (S)$ is open.
+
+
+As the next example shows, the corresponding result does not hold for a closed set.
+
+{\bf Example} (Valentine, p. 14)
+If $$ S=\{ (x,1/|x|)\in \R^2 \mid x\in \R\setminus \{0\} \},$$
+then $S$ is closed, 
+but $\cull (S)$ is the open half-space $\{(x,y) \mid x\in \R, y\in(0,\infty) \}$,
+which is not closed  (points on the $x$-axis are accumulation points not in the set, or also can be seen by checking the complement is not open). $\Box$ 
+
+\textbf{Reference}\\
+F.A. Valentine, \emph{Convex sets}, McGraw-Hill book company, 1964.
+%%%%%
+%%%%%
+\end{document}

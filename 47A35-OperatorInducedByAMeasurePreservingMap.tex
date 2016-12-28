@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OperatorInducedByAMeasurePreservingMap}
+\pmcreated{2013-03-22 17:59:19}
+\pmmodified{2013-03-22 17:59:19}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{operator induced by a measure preserving map}
+\pmrecord{7}{40499}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A35}
+\pmclassification{msc}{28D05}
+\pmclassification{msc}{37A05}
+\pmdefines{isometry induced by a measure preserving map}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{theorem}
+\PMlinkescapephrase{induced}
+\PMlinkescapephrase{property}
+\PMlinkescapephrase{properties}
+\PMlinkescapephrase{side}
+
+\section{Induced Operators}
+
+Let $(X_1, \mathfrak{B}_1, \mu_1)$ and $(X_2, \mathfrak{B}_2, \mu_2)$ be measure spaces and denote by $L^0(X_1)$ and $L^0(X_2)$ the corresponding spaces of measurable functions (with values in $\mathbb{C}$).
+
+{\bf Definition -} If $T: X_1 \longrightarrow X_2$ is a measure-preserving transformation we can define an operator $U_T:L^0(X_2) \longrightarrow L^0(X_1)$ by
+
+\begin{displaymath}
+(U_T f)(x):=f(Tx)\,, \qquad\qquad f \in L^0(X_2),\; x \in X_1
+\end{displaymath}
+
+The operator $U_T$ is called the \emph{\PMlinkescapetext{operator induced} by $T$}.
+
+ Many ideas in ergodic theory can be explored by studying this operator.
+
+\section{Basic Properties}
+
+The following \PMlinkescapetext{properties} are clear:
+
+\begin{itemize}
+\item $U_T$ is linear.
+\item $U_T$ maps real valued functions to real valued functions.
+\item If $f \geq 0$ then $U_Tf \geq 0$ 
+\item $U_T k = k$ for every constant function $k$.
+\item $U_T(fg)=U_T(f)U_T(g)$.
+\item $U_T$ maps characteristic functions to characteristic functions. Moreover, $U_T \chi_B = \chi_{T^{-1}B}$, for every measurable set $B \in \mathfrak{B}_2$.
+\item If $T_1:X_1 \longrightarrow X_2$ and $T_2:X_2 \longrightarrow X_3$ are measure preserving maps, then $U_{T_2 \circ T_1} = U_{T_1}U_{T_2}$.
+\end{itemize}
+
+\section{Preserving Integrals}
+
+
+{\bf Theorem 1 -} If $f \in L^0(X_2)$ then $\int_{X_1} U_Tf\;d\mu_1 = \int_{X_2} f\;d\mu_2$, where if one side does not exist or is infinite, then the other side has the same property.
+
+
+\section{Induced Isometries}
+ It can further be seen that a measure-preserving transformation induces an isometry between \PMlinkname{$L^p$-spaces}{LpSpace}, for $p \geq 1$.
+
+
+{\bf Theorem 2 -} Let $p \geq 1$. We have that $U_T(L^p(X_2)) \subseteq L^p(X_1)$ and, moreover,
+\begin{displaymath}
+\|U_T(f)\|_p = \|f\|_p\,, \qquad\qquad \text{for all}\; f \in L^p(X_2)
+\end{displaymath}
+
+$\,$
+
+Thus, when restricted to $L^p$-spaces, $U_T$ is called the \emph{isometry induced by $T$}.
+%%%%%
+%%%%%
+\end{document}

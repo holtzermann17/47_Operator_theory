@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatTheConvexHullOfSIsOpenIfSIsOpen}
+\pmcreated{2013-03-22 14:09:48}
+\pmmodified{2013-03-22 14:09:48}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{proof that the convex hull of $S$ is open if $S$ is open}
+\pmrecord{6}{35587}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47L07}
+\pmclassification{msc}{46A55}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S$ be an open set in some topological vector space $V$.  For any sequence of positive real numbers $\Lambda = (\lambda_1,\ldots,\lambda_n)$ with $\sum_{i=1}^n \lambda_i = 1$ define 
+\[
+S_\Lambda = \left\{x\in V \text{ such that } x=\sum_{i=1}^n \lambda_i s_i \text{ for }s_i\in S\right\}.
+\]
+Then since addition and scalar multiplication are both open maps, each $S_\Lambda$ is open.  Finally, the convex hull is clearly just 
+\[
+\bigcup_\Lambda S_\Lambda,
+\]
+which is therefore open.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrachistochroneCurve}
+\pmcreated{2013-03-22 19:19:29}
+\pmmodified{2013-03-22 19:19:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{brachistochrone curve}
+\pmrecord{15}{42264}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+\pmclassification{msc}{49K05}
+\pmsynonym{curve of fastest descent}{BrachistochroneCurve}
+\pmrelated{BrachistochroneProblem}
+\pmrelated{SpeediestInclinedPlane}
+\pmrelated{CalculusOfVariations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We shall derive the equations of the \emph{brachistochrone curve}, i.e. of the curve $\gamma$ along which a point of \PMlinkescapetext{mass} $m$ moves, under gravitation only, from the origin to a given point \,$(x_f,\,y_f)$\, in the shortest time.\, It is supposed that\, 
+$x_f > 0$\, and\, $y_f < 0.$\\
+
+On the curve $\gamma$,\, having an equation\, $y = y(x)$\, with\, $y \le 0$,\, the equality
+$$\frac{1}{2}mv^2 \;=\; -mgy$$
+is in \PMlinkescapetext{force}, by the \emph{work-energy principle}.\, Thus the velocity of the mass-point on the curve has the expression
+$$\frac{ds}{dt} \;=\; v \;=\; \sqrt{-2gy},$$
+and accordingly
+$$dt \;=\; \frac{ds}{v} \;=\; \frac{ds}{\sqrt{-2gy}}.$$
+Hence the total time elapsed on $\gamma$ is given by the path integral
+$$T \;=\; \int_{(0,0)}^{(x_f,y_f)}\!\frac{ds}{\sqrt{-2gy}}$$
+taken along $\gamma$;\, restricting to differentiable functions
+\begin{align}
+y = y(x),
+\end{align}
+this reads
+\begin{align}
+T \;=\; \frac{1}{\sqrt{2g}}\int_0^{x_f}\!\underbrace{\frac{\sqrt{1\!+\!y'^{\,2}}}{\sqrt{-y}}}_{f(y,\,y')}\,dx.
+\end{align}
+The function (1) should be determined such that the integral in (2) would attain its least value.\, Since the integrand \,$f(y,\,y')$\, of (2) does not depend explicitly on the variable $x$, the \PMlinkid{Euler--Lagrange condition}{2092} of this \PMlinkname{variational problem}{CalculusOfVariations} reduces by the Beltrami identity to 
+$$f(y,\,y')-y'f'_{y'}(y,\,y') 
+\;=\; \frac{\sqrt{1\!+\!y'^{\,2}}}{\sqrt{-y}}-\frac{y'^{\,2}}{\sqrt{-y\!\cdot\!(1\!+\!y'^{\,2})}}
+\;=\; \frac{1}{\sqrt{-y\!\cdot\!(1\!+\!y'^{\,2})}} \;=\; \mbox{constant}.$$
+Denoting this constant by $\frac{1}{c}$, we get\, $-y\!\cdot\!(1\!+\!y'^{\,2}) = c^2$,\, whence
+$$y' \;=\; \frac{dy}{dx} \;=\; \sqrt{\frac{c^2\!+\!y}{-y}}$$
+and finally
+\begin{align}
+x \;=\; \int\!\sqrt{\frac{-y}{c^2\!+\!y}}\,dy.
+\end{align}
+The \PMlinkid{substitution}{6114}
+\begin{align}
+-y \;=\; c^2\sin^2\frac{\varphi}{2} \;=\; \frac{c^2}{2}(1-\cos\varphi)
+\end{align}
+enables us to calculate the integral (3), yielding
+\begin{align}
+x \;=\; \frac{c^2}{2}\int(1-\cos\varphi)\,d\varphi \;=\; \frac{c^2}{2}(\varphi-\sin\varphi)+C.
+\end{align}
+Consequently we have by (4) and (5) the parametric presentation
+\begin{align}
+\begin{cases}
+x \;=\; a(\varphi-\sin\varphi)+C,\\
+y \;=\; -a(1-\cos\varphi)
+\end{cases}
+\end{align}
+of the extremals of the variational problem.\, Here, $a$ and $C$ are constants of integration and $\varphi$ the parametre of the curves.\, Since the movement begins from the origin, one has\, $C = 0$.\, The value of $a$ is uniquely determined by the \PMlinkescapetext{end point}\, $(x_f,\,y_f)$.\\ 
+
+The result means that the searched speediest curve $\gamma$ is an arc of cycloid, concave upwards.
+
+\begin{center}
+\begin{pspicture}(-2,-3)(8,1)
+\pscurve[linecolor=blue](0,0)(0.00126,-0.019215)(0.01,-0.07612)(0.0335,-0.16853)(0.0783,-0.2929)(0.1503,-0.44443)
+                        (0.25422,-0.61732)(0.39366,-0.80491)(0.5708,-1)(0.78636,-1.19509)(1.04,-1.3827)(1.3284,-1.5556)
+                        (1.649,-1.7071)(2,-1.83147)(2.36621,-1.924)(2.75,-1.98)(3.1416,-2)(3.533,-1.98)(3.917,-1.924)
+                        (4.2862,-1.83147)(4.6341,-1.7071)(4.955,-1.5556)(5.24357,-1.3827)(5.4969,-1.19509)(5.7124,-1)
+                        (5.89,-0.80491)(6.03,-0.61732)(6.133,-0.44443)(6.205,-0.2929)(6.25,-0.16853)(6.2732,-0.07612)
+                        (6.282,-0.019215)
+\psdot[linewidth=0.042,linecolor=red](0,0)
+\psdot[linewidth=0.025,linecolor=blue](4.6341,-1.7071)
+\rput(5.1,-2){$(x_f,y_f)$}
+\psline[linecolor=red]{->}(0.7,-0.8)(1,-1.1)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-0.5,-2.1)(6.8,0.8)
+\rput[a](6.8,-0.25){$x$}
+\rput[r](-0.13,0.84){$y$}
+\rput[l](-2,-2){.}
+\rput(8,1){.}
+\end{pspicture}
+\end{center}
+
+Note that for different values of $a$ $(> 0)$, all the curves (6) are homothetic with respect to the origin (in the case\, $C = 0$).\, Evidently, the family of curves \PMlinkescapetext{covers} once the whole fourth quadrant of the plane.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc E. Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset IV. Johdatus variatiolaskuun}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1946).
+\end{thebibliography}
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

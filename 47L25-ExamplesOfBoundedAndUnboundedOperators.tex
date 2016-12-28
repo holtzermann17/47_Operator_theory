@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfBoundedAndUnboundedOperators}
+\pmcreated{2013-03-22 15:17:37}
+\pmmodified{2013-03-22 15:17:37}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{examples of bounded and unbounded operators}
+\pmrecord{12}{37091}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47L25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+The aim of this page is to list examples of \PMlinkname{bounded}{BoundedOperator} and unbounded 
+linear operators. 
+
+\subsubsection*{Bounded}
+\begin{itemize}
+\item Identity operator, Zero operator
+\item Shift operators on $\ell^p$
+\item A linear operator is continuous if and only if 
+   it is bounded (see \PMlinkname{this page}{ContinuousLinearMapping}).
+\item Any isometry is bounded.
+\item A multiplication operator $h(t) \mapsto f(t) h(t)$, where $f(t)$
+  is continuous and $h\in L^p[0,1]$.
+\item An integral operator $h(t) \mapsto \int_0^1 K(t,s) h(s)\,ds$, where
+  $\int_0^1\int_0^1 \abs{K(s,t)}^2\,ds\,dt < \infty$ and $h\in L^2[0,1]$.
+  In fact this is a Hilbert-Schmidt operator.
+\item The Volterra operator $h(t) \mapsto \int_0^t h(s)\,ds$, where
+  $h\in L^p[0,1]$.
+\end{itemize}
+
+\subsubsection*{Unbounded}
+\begin{itemize}
+\item The derivative is an unbounded operator on the 
+   vector space of smooth functions equipped with the 
+   $\operatorname{sup}$-norm.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassicalIsoperimetricProblem}
+\pmcreated{2013-03-22 19:10:26}
+\pmmodified{2013-03-22 19:10:26}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{classical isoperimetric problem}
+\pmrecord{22}{42081}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+\pmclassification{msc}{49K22}
+\pmclassification{msc}{49K05}
+\pmrelated{LagrangeMultiplierMethod}
+\pmrelated{CircularSegment}
+\pmrelated{AngleOfViewOfALineSegment}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{variation}
+The points $a$ and $b$ on the $x$-axis have to be \PMlinkescapetext{connected} by an arc with a given \PMlinkname{length}{ArcLength} $l$ such that the area between the $x$-axis and the arc is as great as possible.\\
+
+Denote the equation of the searched arc by\, $y = y(x)$.\, The task, which belongs to the \PMlinkname{isoperimetric problems}{IsoperimetricProblem}, can be formulated as
+\begin{align}
+\mbox{to maximise} \quad \int_a^b\!y\,dx
+\end{align}
+under the constraint condition
+\begin{align}
+\int_a^b\!\sqrt{1\!+\!y'^{\,2}}\,dx \;=\; l.
+\end{align}
+We have the integrands
+$$f(x,\,y,\,y') \;\equiv\; y, \quad  g(x,\,y,\,y') \;\equiv\; \sqrt{1\!+\!y'^{\,2}}.$$
+The \PMlinkescapetext{conditional} variation problem for the functional in (1) may be considered as a free variation problem (without conditions) for the functional $\int_a^b(f\!-\!\lambda g)\,dx$ where $\lambda$ is a Lagrange multiplier.\, For this end we need the \PMlinkname{Euler--Lagrange differential equation}{EulerLagrangeDifferentialEquation}
+\begin{align}
+\frac{\partial}{\partial y}(f\!-\!\lambda g)-\frac{d}{dx}\frac{\partial}{\partial y'}(f\!-\!\lambda g) \;=\; 0.
+\end{align}
+Since the expression $f\!-\!\lambda g$ does not depend explicitly on $x$, the differential equation (3) has, by the Beltrami identity, a first integral of the form
+$$(f\!-\!\lambda g)-y'\!\cdot\!(f'_{y'}\!-\!\lambda g'_{y'}) \;=\; C_2,$$
+which reads simply
+$$y-\frac{\lambda}{\sqrt{1\!+\!y'^{\,2}}} \;=\; C_2.$$
+This differential equation may be written
+$$y' \;\equiv\; \frac{dy}{dx} \;=\; \frac{\sqrt{\lambda^2\!-\!(y\!-\!C_2)^2}}{y\!-\!C_2},$$
+where one can \PMlinkname{separate the variables}{SeparationOfVariables} and integrate, obtaining the equation
+$$(x\!-\!C_1)^2+(y\!-\!C_2)^2 \;=\; \lambda^2$$
+of a circle.\, Here, the parametres $C_1,\,C_2,\,\lambda$ may be determined from the conditions 
+$$y(a) \;=\; y(b) \;=\; 0, \quad \mbox{arc length} \;=\; l.$$
+Thus the extremal of this variational problem is  a \PMlinkname{circular arc}{CircularSegment} connecting the given points.
+
+Note that in every point of the arc, the angle of view of the line segment between the given points is constant.
+
+
+\begin{center}
+\begin{pspicture}(-4,-3)(4,2)
+\psdots[linewidth=0.02](-1.5,0)(1.5,0)
+\psline{->}(-3,0)(3,0)
+\psarc[linecolor=red](0,-2.6){3}{60}{120}
+\rput(3.1,-0.25){$x$}
+\rput(-1.5,-0.3){$a$}
+\rput(+1.5,-0.3){$b$}
+\rput(0,0.7){$l$}
+\rput(-4,-2){.}
+\rput(+4,+2){.}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixInversionLemma}
+\pmcreated{2013-03-22 15:38:44}
+\pmmodified{2013-03-22 15:38:44}
+\pmowner{kronos}{12218}
+\pmmodifier{kronos}{12218}
+\pmtitle{matrix inversion lemma}
+\pmrecord{6}{37577}
+\pmprivacy{1}
+\pmauthor{kronos}{12218}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47S99}
+\pmsynonym{Sherman-Morrison formula}{MatrixInversionLemma}
+\pmsynonym{Woodbury matrix identity}{MatrixInversionLemma}
+\pmsynonym{Woodbury formula}{MatrixInversionLemma}
+\pmsynonym{rank-k correction}{MatrixInversionLemma}
+\pmrelated{SchurComplement}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+These frequently used formulae allow to quickly calculate the inverse of a slight modification of an operator (matrix) $x$, given that $x^{-1}$ is already known.
+
+The matrix inversion lemma states that $$\left( x+ s \sigma z^* \right)^{-1} = x^{-1} - x^{-1} s \left( \sigma^{-1} + z^* x^{-1} s \right)^{-1} z^* x^{-1},$$ where $x$, $s$, $z^*$ and $\sigma$ are operators (matrices) of appropriate size. The formula especially is convenient if the rank of the regular $\sigma$ is 1, or small in comparison to $x$'s rank.
+
+This identity, involving the inverse of Schur's complement $d- z^* x^{-1} s$ (hopefully this may be easily computed) holds as well: $$\begin{bmatrix} x & s \\ z^* & d \end{bmatrix}^{-1} = \begin{bmatrix} x^{-1}+ x^{-1} s (d- z^* x^{-1} s)^{-1} z^* x^{-1} & -x^{-1} s (d-z^*x^{-1}s)^{-1} \\ -(d-z^*x^{-1}s)^{-1} z^* x^{-1} & (d-z^*x^{-1}s)^{-1} \end{bmatrix}.$$
+%%%%%
+%%%%%
+\end{document}

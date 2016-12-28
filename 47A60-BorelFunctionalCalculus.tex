@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BorelFunctionalCalculus}
+\pmcreated{2013-03-22 18:48:44}
+\pmmodified{2013-03-22 18:48:44}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Borel functional calculus}
+\pmrecord{10}{41614}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+\pmclassification{msc}{46L10}
+\pmclassification{msc}{46H30}
+\pmrelated{FunctionalCalculus}
+\pmrelated{PolynomialFunctionalCalculus}
+\pmrelated{ContinuousFunctionalCalculus2}
+\pmdefines{Borel functions of a normal operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{spectrum}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{property}
+\PMlinkescapeword{closure}
+\PMlinkescapeword{strong}
+
+Let $B(H)$ be the \PMlinkname{algebra}{Algebra} of bounded operators over a complex Hilbert space $H$ and $T \in B(H)$ a normal operator.
+
+The {\bf Borel functional calculus} is a functional calculus which enables the expression
+\begin{align*}
+f(T)
+\end{align*}
+to make sense as a bounded operator in $H$, for a \PMlinkname{bounded}{Bounded} Borel function $f$.
+
+In particular, it allows the definition of operators $\chi_S (T)$ for any characteristic function $\chi_S$, which are of significant importance on the \PMlinkescapetext{comprehension} of the \PMlinkescapetext{structure} of $T$.
+
+The Borel functional calculus will be constructed by extending the continuous functional calculus for arbitrary bounded Borel functions.
+
+\section{Preliminary Facts}
+
+Let us set some notation first:
+\begin{itemize}
+\item $\sigma(T)$ will denote the \PMlinkname{spectrum}{Spectrum} of $T$.
+\item $C(\sigma(T))$ will denote the \PMlinkname{$C^*$-algebra}{CAlgebra} of continuous functions $\sigma(T) \to \mathbb{C}$.
+\item $B(\sigma(T))$ will denote the $C^*$-algebra of bounded Borel functions $\sigma(T) \to \mathbb{C}$, endowed with the sup norm.
+\end{itemize}
+
+The continuous functional calculus for $T$ allows the expression $f(T)$ to make sense for continuous functions $f \in C(\sigma(T))$, by the assignment of a unital *-homomorphism
+\begin{align*}
+\pi: C(\sigma(T)) \longrightarrow B(H) \\
+f \longmapsto f(T):= \pi(f)
+\end{align*}
+that sends the identity function to $T$. This unital *-homomorphism is in fact uniquely determined by this property (see the entry on the \PMlinkname{continuous functional calculus}{ContinuousFunctionalCalculus2} for more details).
+
+The objective is to extend $\pi$ to a unital *-homomorphism $\widetilde{\pi}: B(\sigma(T)) \longrightarrow B(H)$.
+
+Since $B(\sigma(T))$ is a much larger $C^*$-algebra than $C(\sigma(T))$, there is no reson to presume that there is only one extension of $\pi$. Which extension would be the most natural then? It turns out that there is a unique extension that satisfies a good continuity property.
+
+It is known that *-homomorphisms between $C^*$-algebras are continuous (see \PMlinkname{this entry}{HomomorphismsOfCAlgebrasAreContinuous}), so that whenever a net $f_i \in B(\sigma(T))$ converges in the sup norm to a function $f \in B(\sigma(T))$ we will have that $f_i(T) \to f(T)$ in the operator norm. All extensions of $\pi$ will automaticaly satisfy this continuity property, but this can be improved in a satisfactory manner.
+
+$\,$
+
+{\bf Notation -} \emph{Let $X$ be a compact Hausdorff space, $M(X)$ the space of all finite \PMlinkname{regular}{OuterRegular} Borel measures in $X$ and $B(X)$ the $C^*$-algebra of all bounded Borel functions in $X$. The weakest topology in $B(X)$ for which integration against any measure $\nu$ is continuous will be reffered to as the} $\mu$-topology. \emph{This means that $f_i \to f$ in the $\mu$-topology if and only if $\int f_i d\nu \to \int f d\nu$ for all $\nu \in M(X)$.}
+
+$\,$
+
+Notice that we can identify each function $f \in B(X)$ with a bounded \PMlinkname{linear functional}{Functional} $\omega_f$ in $M(X)$, given by
+\begin{align*}
+\omega_f (\nu):= \int_X f d \nu\,, \qquad\qquad \nu \in M(X)
+\end{align*}
+and the $\mu$-topology corresponds exactly to the weak-* topology under this identification.
+
+We will see in the next \PMlinkescapetext{section} that there is an unique extension of $\pi$ that is continuous from the $\mu$-topology to the weak operator topology.
+
+Just like the \PMlinkname{Stone-Weierstrass theorem}{StoneWeierstrassTheoremComplexVersion} allowed the passage from the polynomial functional calculus to the continuous functional calculus, the \PMlinkname{Riesz representation theorem}{RieszRepresentationTheoremOfLinearFunctionalsOnFunctionSpaces} will allow the passage from the latter to the Borel functional calculus.
+
+\section{Definition}
+
+The following result is the key for the definition of the Borel functional calculus.
+
+$\,$
+
+{\bf Theorem 1 -} \emph{Let $T$ be a normal operator in $B(H)$ and $\pi:C(\sigma(T)) \longrightarrow B(H)$ the unital *-homomorphism corresponding to the continuous functional calculus for $T$. Then, $\pi$ extends uniquely to a *-homomorphism $\widetilde{\pi}: B(\sigma(T)) \longrightarrow B(H)$ that is continuous from the $\mu$-topology to the weak operator topology. Moreover, each operator $\pi(f)$ lies in \PMlinkname{strong operator}{OperatorTopologies} \PMlinkname{closure}{Closure} of the unital *-algebra generated by $T$.}
+
+$\,$
+
+{\bf \emph{\PMlinkescapetext{Proof}:}} See \PMlinkname{this attached entry}{ProofOfBorelFunctionalCalculus}
+
+$\,$
+
+We are now able to define the Borel functional calculus:
+
+{\bf Definition -} \emph{Let $T$ be a normal operator in $B(H)$. Let $\widetilde{\pi}: B(\sigma(T)) \longrightarrow B(H)$ be the unique *-homomorphism defined in Theorem 1. This *-homomorphism is denoted by}
+\begin{align*}
+f \longmapsto f(T)\,, \qquad\qquad f \in B(\sigma(T))
+\end{align*}
+\emph{and it is called the} {\bf Borel functional calculus} \emph{for $T$}.
+
+$\,$
+
+Since this functional calculus extends the polynomial functional calculus, we have that for any polynomial $p(z):= \sum c_{n,m} z^n \overline{z}^m$,
+\begin{align*}
+p(T)= \sum c_{n,m} T^n(T^*)^m
+\end{align*}
+Moreover, since $f(T)$ lies in the strong operator closure of the unital *-algebra generated by $T$, for any function $f \in B(\sigma(T))$, we see that $f(T)$ is the strong operator limit of polynomials $\sum c_{n,m} T^n(T^*)^m$.
+
+\section{Borel Calculus in von Neumann Algebras}
+
+The Borel functional calculus is in fact applicable for any normal operator $T$ in any von Neumann algebra $\mathcal{M}$.
+
+That is due to the fact, expressed in Theorem 1, that for every $f \in B(\sigma(T))$ the operator $f(T)$ belongs to the strong operator closure of the unital *-algebra generated by $T$. Being a von Neumann algebra, $\mathcal{M}$ is \PMlinkname{closed}{ClosedSet} in the strong operator topology, and therefore all operators $f(T)$ belong to $\mathcal{M}$.
+
+Thus, by restriction, we have in fact a *-homomorphism
+\begin{align*}
+\widetilde{\pi}: B(\sigma(T)) \longrightarrow \mathcal{M} \\
+f \longmapsto f(T)
+\end{align*}
+satisfying the properties of Theorem 1, i.e. we have a Borel functional calculus for normal operators of a von Neumann algebra.
+
+\begin{thebibliography}{9}
+\bibitem{Arv} W. Arveson, \emph{A Short Course on Spectral Theory}, Graduate Texts in Mathematics, 209, Springer, New York, 2002
+\bibitem{Weaver} N. Weaver, \emph{Mathematical Quantization}, Studies in Advanced Mathematics, Chapman \& Hall/CRC, Boca Raton, FL, 2001
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

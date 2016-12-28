@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrouwerFixedPointInOneDimension}
+\pmcreated{2013-03-22 13:46:25}
+\pmmodified{2013-03-22 13:46:25}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Brouwer fixed point in one dimension}
+\pmrecord{10}{34480}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47H10}
+\pmclassification{msc}{54H25}
+\pmclassification{msc}{55M20}
+\pmrelated{LipschitzCondition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{satisfies}
+{\bf Theorem 1} \cite{mukherjea, adams}
+Suppose $f$ is a continuous function
+$f:[-1,1]\to [-1,1]$. Then $f$ has a fixed point, i.e.,
+there is a $x$ such that $f(x)=x$.
+
+{\bf Proof} (Following \cite{mukherjea})
+We can assume that $f(-1)>-1$ and $f(+1)<1$, since otherwise
+there is nothing to prove. Then, consider the function $g:[-1,1]\to \sR$
+defined by $g(x)=f(x)-x$. It satisfies
+\begin{eqnarray*}
+g(+1) &<& 0,\\
+g(-1) &>& 0,
+\end{eqnarray*}
+so by the intermediate value theorem, there is a point $x$
+such that $g(x)=0$, i.e., $f(x)=x$. $\Box$
+
+Assuming slightly more of the function $f$ yields the
+Banach fixed point theorem. In one dimension it states the following:
+
+{\bf Theorem 2} Suppose $f:[-1,1]\to [-1,1]$ is a function that satisfies the 
+following condition:
+\begin{itemize}
+\item[] for some constant $C\in[0,1)$, we have for each $a,b\in[-1,1]$, 
+$$|f(b)-f(a)|\le C |b-a|.$$
+\end{itemize}
+Then $f$ has  a unique fixed point in $[-1,1]$. In other words, there exists
+one and only one point $x\in[-1,1]$ such that $f(x)=x$. 
+
+{\bf Remarks}
+The fixed point in Theorem 2 can be found by iteration from any $s\in[-1,1]$ as follows: 
+first choose some $s\in[-1,1]$. 
+Then form $s_1=f(s)$, then $s_2=f(s_1)$, and generally $s_n=f(s_{n-1})$. 
+As $n\to \infty$, $s_n$ approaches the fixed point for $f$. More details 
+are given on the entry for the Banach fixed point theorem. 
+A function that satisfies the
+ condition in Theorem 2 is called a contraction mapping. Such mappings also satisfy the
+\PMlinkname{Lipschitz condition}{LipschitzCondition}.
+
+\begin{thebibliography}{9}
+ \bibitem{mukherjea}
+ A. Mukherjea, K. Pothoven,
+ \emph{Real and Functional analysis},
+ Plenum press, 1978.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

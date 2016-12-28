@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBrouwerFixedPointTheorem}
+\pmcreated{2013-03-22 13:11:24}
+\pmmodified{2013-03-22 13:11:24}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{proof of Brouwer fixed point theorem}
+\pmrecord{6}{33642}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47H10}
+\pmclassification{msc}{54H25}
+\pmclassification{msc}{55M20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Proof of the Brouwer fixed point theorem:
+
+Assume that there does exist a map from $f:B^n\to B^n$ with no fixed point.  Then let 
+$g(x)$ be the following map:  Start at $f(x)$, draw the ray going through $x$ and then let $g(x)$ be
+the first intersection of that line with the sphere.  This map is continuous and well defined only
+because $f$ fixes no point. Also, it is not hard to see that it must be the identity on the boundary
+sphere.  Thus we have a map $g:B^n\to S^{n-1}$, which is the identity on
+$S^{n-1}=\partial B^n$, that is, a retraction. Now, if $i:S^{n-1}\to B^n$ is the inclusion
+map, $g\circ i=\mathrm{id}_{S^{n-1}}$.  Applying the reduced homology functor, we find that
+$g_*\circ i_*=\mathrm{id}_{\tilde{H}_{n-1}(S^{n-1})}$, where $_*$ indicates the induced map on homology.
+
+But, it is a well-known fact that $\tilde{H}_{n-1}(B^n)=0$ (since $B^n$ is contractible), and that
+$\tilde{H}_{n-1}(S^{n-1})=\mathbb{Z}$.  Thus we have an isomorphism of a non-zero group onto itself
+factoring through a trivial group, which is clearly impossible.  Thus we have a contradiction,
+and no such map $f$ exists.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialIsometryOnHilbertSpaces}
+\pmcreated{2013-03-22 18:35:00}
+\pmmodified{2013-03-22 18:35:00}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{partial isometry on Hilbert spaces}
+\pmrecord{7}{41309}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47C10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+%theorems
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem{Lem}{Theorem}
+\newtheorem{Lem2}{Lemma}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+\newtheorem{Prop}{Proposition}
+
+
+% commands
+%\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+\newcommand{\scal}[2]{\langle #1, #2 \rangle}
+\newcommand{\ran}{\mathrm{ran}}
+
+
+\begin{document}
+\begin{Def}
+Let $\mathscr{H}$ and $\mathscr{K}$ be Hilbert spaces. An operator $W \in L(\mathscr{H}, \mathscr{K})$ is called a \emph{partial isometry} if $W$ is an isometry on $M = (\ker W)^{\perp}$. We then call $M = (\ker W)^{\perp}$ the \emph{initial space} and $N = WM$ \emph{final space} of $W$.
+\end{Def}
+
+We need to show that the above definition is compatible with the general definition of partial isometry on rings. Indeed we have the following:
+
+\begin{Prop}
+$W \in L(\mathscr{H},\mathscr{K})$ is a partial isometry iff $W^* W$ is a projection from $\mathscr{H}$ to $M$.
+\end{Prop}
+
+\begin{proof}
+We have:
+\begin{align*}
+W & \ \text{partial isometry with initial space} \ M \\
+\Leftrightarrow \scal{Wf}{Wg} &= \scal{f}{g} \ \forall \ f,g \in M \\
+\Leftrightarrow \scal{W^* W f}{g} &= \scal{f}{g} \ \forall \ f \in M, g \in \mathscr{H} \\
+\Leftrightarrow W^* W f &= f, f \in M \\
+\text{and} \ W^* W f &= 0, f \in M^{\perp} = \ker W
+\end{align*}
+\end{proof}
+
+\begin{Rem}
+If $W \in L(\mathscr{H}, \mathscr{K})$ is a partial isometry with initial space $M$ and final space $N$ we have:
+\begin{align*}
+W^* (Wf) &= f \ \forall \ f \in M \\
+\ker W^* &= (\ran W)^{\perp} = N^{\perp}
+\end{align*}
+
+Thus $N$ is the initial space and $M$ the final space of $W^*$.
+\end{Rem}
+
+
+%%%%%
+%%%%%
+\end{document}

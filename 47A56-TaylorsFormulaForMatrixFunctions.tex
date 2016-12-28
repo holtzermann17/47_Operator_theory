@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaylorsFormulaForMatrixFunctions}
+\pmcreated{2013-03-22 13:39:25}
+\pmmodified{2013-03-22 13:39:25}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{Taylor's formula for matrix functions}
+\pmrecord{7}{34311}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A56}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\mv}[1]{\mathbf{#1}}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $p$ be a polynomial and suppose $\mv{A}$ and $\mv{B}$ commute, i.e. $\mv{A}\mv{B}=\mv{B}\mv{A}$, then
+\begin{displaymath}
+p(\mv{A}+\mv{B})=\sum_{k=0}^{n}\frac{1}{k!}p^{(k)}(\mv{A})\mv{B}^k .
+\end{displaymath}
+where $n=\deg(p)$.
+%%%%%
+%%%%%
+\end{document}

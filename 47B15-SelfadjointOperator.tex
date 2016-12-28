@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SelfadjointOperator}
+\pmcreated{2013-03-22 13:48:23}
+\pmmodified{2013-03-22 13:48:23}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{self-adjoint operator}
+\pmrecord{8}{34527}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47B15}
+\pmclassification{msc}{47B25}
+\pmrelated{HermitianMatrix}
+\pmdefines{Hermitian operator}
+\pmdefines{symmetric operator}
+\pmdefines{essentially self-adjoint}
+\pmdefines{self-adjoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+\PMlinkescapeword{symmetric} \PMlinkescapeword{Hermitian}
+A densely defined linear operator $A\colon\mathscr{D}(A)\subset \mathscr{H}\to\mathscr{H}$ on a Hilbert space $\mathscr{H}$ is a \emph{Hermitian} or \emph{symmetric} operator if $(Ax,y) = (x,Ay)$ for all $x,y\in \mathscr{D}(A)$. This means that the adjoint $A^*$ of $A$ is defined at least on $\mathscr{D}(A)$ and that its restriction to that set coincides with $A$. This fact is often denoted by $A\subset A^*$.
+
+The operator $A$ is \emph{self-adjoint} if it coincides with its adjoint, i.e. if $A=A^*$.
+If $A$ is closable and its closure coincides with its adjoint (i.e. $\overline{A}=A^*$), then $A$ is said to be \emph{essentially self-adjoint}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalgebraHomomorphismsPreserveContinuousFunctionalCalculus}
+\pmcreated{2013-03-22 18:00:50}
+\pmmodified{2013-03-22 18:00:50}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$C^*$-algebra homomorphisms preserve continuous functional calculus}
+\pmrecord{5}{40529}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+\pmclassification{msc}{46L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let us setup some notation first: Let $\mathcal{A}$ be a unital \PMlinkname{$C^*$-algebra}{CAlgebra} and $z$ a normal element of  $\mathcal{A}$. Then
+\begin{itemize}
+\item $\sigma(z)$ denotes the spectrum of $z$.
+\item $C(\sigma(z))$ denotes the $C^*$-algebra of continuous functions $\sigma(z) \longrightarrow \mathbb{C}$.
+\item If $f \in C(\sigma(z))$ then $f(z)$ is the element of $\mathcal{A}$ given by the continuous functional calculus.
+\end{itemize}
+
+$\,$
+
+{\bf Theorem -} Let $\mathcal{A}$, $\mathcal{B}$ be unital \PMlinkname{$C^*$-algebras}{CAlgebra} and $\Phi :\mathcal{A} \longrightarrow \mathcal{B}$ a *-homomorphism. Let $x$ be a normal element in $\mathcal{A}$. If $f \in C(\sigma(x))$ then
+\begin{align*}
+\Phi(f(x)) = f(\Phi(x))
+\end{align*}
+
+$\,$
+
+{\bf \emph{Proof:}} The identity elements of $\mathcal{A}$ and $\mathcal{B}$ will be both denoted by $e$ and it will be clear from the context which one we are referring to.
+
+First, we need to check that $f(\Phi(x))$ is a well-defined element of $\mathcal{B}$, i.e. that $\sigma(\Phi(x)) \subseteq \sigma(x)$. This is clear since, if $x - \lambda e$ is invertible for some $\lambda \in \mathbb{C}$, then $\Phi(x)-\lambda e = \Phi(x- \lambda e)$ is also invertible.
+
+Let $\{p_n\}$ be sequence of polynomials in $C(\sigma(x))$ converging uniformly to $f$. Then we have that
+\begin{itemize}
+\item $\Phi(p_n(x)) \longrightarrow \Phi(f(x))$, by the continuity of $\Phi$ (see \PMlinkname{this entry}{HomomorphismsOfCAlgebrasAreContinuous}) and the continuity of the continuous functional calculus mapping.
+\end{itemize}
+\begin{itemize}
+\item $p_n(\Phi(x)) \longrightarrow f(\Phi(x))$, by the continuity of the continuous functional calculus mapping.
+\end{itemize}
+
+It is easily checked that $\Phi(p_n(x)) = p_n(\Phi(x))$ (since $\Phi$ is an homomorphism). Hence we conclude that $\Phi(f(x)) = f(\Phi(x))$ as intended. $\square$
+%%%%%
+%%%%%
+\end{document}

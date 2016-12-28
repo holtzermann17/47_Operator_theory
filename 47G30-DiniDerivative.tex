@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiniDerivative}
+\pmcreated{2013-03-22 13:57:00}
+\pmmodified{2013-03-22 13:57:00}
+\pmowner{lha}{3057}
+\pmmodifier{lha}{3057}
+\pmtitle{Dini derivative}
+\pmrecord{11}{34714}
+\pmprivacy{1}
+\pmauthor{lha}{3057}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47G30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\bf upper Dini derivative} of a continuous function, $f:{\bf R} \mapsto {\bf R}$, denoted by $f'_+$, is defined as
+$$
+    f'_+(t) = \lim_{h\rightarrow 0^+} \sup \frac{f(t + h) - f(t)}{h}.
+$$
+The {\bf lower Dini derivative}, $f'_-$, is defined as
+$$
+    f'_-(t) = \lim_{h\rightarrow 0^+} \inf \frac{f(t + h) - f(t)}{h}.
+$$
+
+Remark: Sometimes the notation $D^+ f(t)$ is used instead of $f'_+(t)$, and $D^- f(t)$ is used instead of $f'_-(t)$.
+
+Remark: Like conventional derivatives, Dini derivatives do not always exist.
+
+If $f$ is defined on a vector space, then the upper Dini derivative at $t$ in the direction $d$ is denoted
+$$
+    f'_+ (t,d) = \lim_{h\rightarrow 0^+} \sup \frac{f(t + hd) - f(t)}{h}.
+$$
+
+If $f$ is locally Lipschitz then $D^+ f$ is finite.  If $f$ is differentiable at $t$ then the Dini derivative at $t$ is the derivative at $t$.
+%%%%%
+%%%%%
+\end{document}

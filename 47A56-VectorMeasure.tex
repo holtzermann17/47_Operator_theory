@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorMeasure}
+\pmcreated{2013-03-22 17:29:23}
+\pmmodified{2013-03-22 17:29:23}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{vector measure}
+\pmrecord{12}{39877}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A56}
+\pmclassification{msc}{46G12}
+\pmclassification{msc}{46G10}
+\pmclassification{msc}{28C20}
+\pmclassification{msc}{28B05}
+\pmdefines{complex measure}
+\pmdefines{countably additive vector measure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $S$ be a set and $\mathcal{F}$ a field of sets of $S$. Let $X$ be a topological vector space.
+
+A {\bf vector measure} is a function $\mu : \mathcal{F} \longrightarrow X$ that is \PMlinkescapetext{finitely additive}, i.e. for any two disjoint sets $A_1, A_2$ in $\mathcal{F}$ we have
+\begin{displaymath}
+\mu(A_1 \cup A_2) = \mu(A_1)+\mu(A_2)
+\end{displaymath}
+
+A vector measure $\mu$ is said to be {\bf \PMlinkescapetext{countably additive}} if for any sequence $(A_n)_{n \in \mathbb{N}}$ of disjoint sets in $\mathcal{F}$ such that $\displaystyle \bigcup_{n =1}^{\infty}A_n \in \mathcal{F}$ one has
+\begin{displaymath}
+\mu(\bigcup_{n =1}^{\infty}A_n) = \sum_{n=1}^{\infty} \mu(A_n)
+\end{displaymath}
+where the series converges in the topology of $X$.
+
+In the particular case when $X = \mathbb{C}$, a countably additive vector measure is usually called a {\bf complex measure}.
+
+Thus, vector measures are \PMlinkescapetext{similar} to measures and signed measures but they take values on a vector space (with a particular topology).
+
+\subsubsection{Examples :}
+\begin{itemize}
+\item Let $(X, \mathfrak{B}, \lambda)$ be a measure space. Consider the Banach space \PMlinkname{$L^p(X, \mathfrak{B}, \lambda)$}{LpSpace} with $1 \leq p \leq \infty$. Define the the function $\mu : \mathfrak{B} \longrightarrow L^p(X, \mathfrak{B}, \mu)$ by
+\begin{displaymath}
+\mu(A) := \chi_A
+\end{displaymath}
+where $\chi_A$ denotes the characteristic function of the measurable set $A$. It is easily seen that $\mu$ is a vector measure, which is countably additive if $1 \leq p < \infty$ (in case $p = \infty$, countably additiveness fails).
+\end{itemize}
+\begin{itemize}
+\item spectral measures are vector measures in the $\sigma$-algebra of Borel sets in $\mathbb{C}$ whose values are projections on some Hilbert space. They are used in general formulations of the spectral theorem.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

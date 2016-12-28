@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CanonicalBasisForSymmetricBilinearForms}
+\pmcreated{2013-03-22 14:56:25}
+\pmmodified{2013-03-22 14:56:25}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{canonical basis for symmetric bilinear forms}
+\pmrecord{7}{36631}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A07}
+\pmclassification{msc}{11E39}
+\pmclassification{msc}{15A63}
+\pmdefines{Sylvester's Law of Inertia}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $B:V \times V \rightarrow K$ is a symmetric bilinear form 
+over a finite-dimensional vector space, where the characteristic of the field is
+not 2, 
+then we may prove that there is an orthogonal basis such that $B$ is represented by 
+
+$$
+\bordermatrix{& \cr
+& a_{1} &  0  & \ldots & 0\cr
+& 0  &  a_{2} & \ldots & 0\cr
+& \vdots & \vdots & \ddots & \vdots\cr
+& 0  &   0       &\ldots & a_{n}\cr
+}
+$$
+
+Recall that a bilinear form has a well-defined rank, and denote this by $r$.
+
+If $K = \mathbb{R}$ we may choose a basis such that $a_1 = \cdots = a_t = 1$, 
+$a_{t+1} = \cdots = a_{t+p} = -1$ and $a_{t+p+j} = 0$, for some integers $p$ and $t$,
+where $1 \le j \le n-t-p$.
+Furthermore, these integers are \emph{invariants} of the bilinear form. 
+This is known as \emph{Sylvester's Law of Inertia}. 
+$B$ is \emph{positive definite} if and only if
+ $t = n$, $p = 0$. Such a form constitutes a \emph{real inner product space}.
+
+If $K = \mathbb{C}$ we may go further and choose a basis such that $a_1 = \cdots = a_r = 1$ and 
+$a_{r + j} = 0$, where $1 \le j \le n-r$.
+
+If $K = F_p$ we may choose a basis such that $a_1 = \cdots = a_{r-1} = 1$, 
+ 
+$a_r = n$ or $a_r = 1$; 
+and $a_{r+j} = 0$, where $1 \le j \le n-r$, and 
+ $n$ is the least positive quadratic non-residue.
+%%%%%
+%%%%%
+\end{document}

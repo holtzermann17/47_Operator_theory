@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedInverseTheorem}
+\pmcreated{2013-03-22 17:30:51}
+\pmmodified{2013-03-22 17:30:51}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{bounded inverse theorem}
+\pmrecord{11}{39905}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+\pmclassification{msc}{46A30}
+\pmsynonym{inverse mapping theorem}{BoundedInverseTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{near}
+
+The next result is a corollary of the open mapping theorem. It is often called the {\bf bounded inverse theorem} or the {\bf inverse mapping theorem}.
+
+{\bf Theorem -} Let $X, Y$ be Banach spaces. Let $T: X \longrightarrow Y$ be an invertible bounded operator. Then $T^{-1}$ is also \PMlinkescapetext{bounded}.
+
+{\bf Proof :} $T$ is a surjective continuous operator between the Banach spaces $X$ and $Y$. Therefore, by the open mapping theorem, $T$ takes open sets to open sets.
+
+So, for every open set $U \subseteq X$, $T(U)$ is open in $Y$.
+
+Hence $(T^{-1})^{-1}(U)$ is open in $Y$, which proves that $T^{-1}$ is continuous, i.e. bounded. $\square$
+
+\subsubsection{Remark}
+
+It is usually of great importance to know if a bounded operator $T:X\longrightarrow Y$ has a bounded inverse. For example, suppose the equation
+\begin{displaymath}
+Tx=y
+\end{displaymath}
+has unique solutions $x$ for every given $y \in Y$. Suppose also that the above equation is very difficult to solve (numerically) for a given $y_0$, but easy to solve for a value $\tilde{y}$ "near" $y_0$. Then, if $T^{-1}$ is continuous,  the correspondent solutions $x_0$ and $\tilde{x}$ are also "near" since
+\begin{displaymath}
+\|x_0 - \tilde{x}\| = \|T^{-1}y_0 - T^{-1}\tilde{y}\| \leq \|T^{-1}\|\|y_0-\tilde{y}\|
+\end{displaymath}
+
+Therefore we can solve the equation for a "near" value $\tilde{y}$ instead, without obtaining a significant error.
+%%%%%
+%%%%%
+\end{document}

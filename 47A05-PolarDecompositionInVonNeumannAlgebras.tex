@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolarDecompositionInVonNeumannAlgebras}
+\pmcreated{2013-03-22 17:28:54}
+\pmmodified{2013-03-22 17:28:54}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{polar decomposition in von Neumann algebras}
+\pmrecord{7}{39868}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+\pmclassification{msc}{46L10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf \PMlinkescapetext{Proposition} -} Let $\mathcal{M}$ be a von Neumann algebra acting on a Hilbert space $H$ and $T \in \mathcal{M}$. If $T = VR$ is the polar decomposition for $T$ with $Ker V = Ker R$, then both $V$ and $R$ belong to $\mathcal{M}$.
+
+{\bf Proof :}
+\begin{itemize}
+\item As $\mathcal{M}$ is a \PMlinkname{$C^*$-algebra}{CAlgebra}, it is known that $R = \sqrt{T^*T}$ belongs to $\mathcal{M}$. (proof will be added later)
+
+\item To see that $V$ also belongs to $\mathcal{M}$, by the double commutant theorem, it suffices to show that $V$ belongs to $\mathcal{M}''$ (the double commutant of $\mathcal{M}$).
+
+Suppose $S \in \mathcal{M}'$. We intend to prove that $V$ commutes with $S$. 
+
+For $x \in H$ we have that
+\begin{displaymath}
+TSx=STx=SVRx
+\end{displaymath}
+and
+\begin{displaymath}
+TSx=VRSx=VSRx
+\end{displaymath}
+
+So $SV$ and $VS$ agree on $\overline{Ran\; R}$.
+
+As $R$ is self-adjoint, $\overline{Ran\; R}^{\perp}=KerR$, and so it remains to show that $SV$ and $VS$ agree on $Ker R$. Recall that, by hypothesis, $Ker R = Ker V$.
+
+Let $x \in Ker R$. We have that $RSx=SRx=0$ and therefore
+\begin{displaymath}
+S(Ker R) \subseteq Ker R = Ker V
+\end{displaymath}
+and so we can conclude that $VS$ is identically zero in $Ker R$.
+
+Clearly $SV$ is also identically zero on $Ker R = Ker V$.
+
+Thus $VS$ and $SV$ agree on $Ker R$. Therefore $SV=VS$ and so $V \in \mathcal{M}''=\mathcal{M}\; \square$
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Adjoint}
+\pmcreated{2013-03-22 13:48:09}
+\pmmodified{2013-03-22 13:48:09}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{adjoint}
+\pmrecord{10}{34522}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+\pmsynonym{adjoint operator}{Adjoint}
+\pmrelated{TransposeOperator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $\mathscr{H}$ be a Hilbert space and let $A\colon \mathscr{D}(A)\subset \mathscr{H}\to \mathscr{H}$ be a densely defined linear operator. Suppose that for some $y\in\mathscr{H}$, there exists
+$z\in\mathscr{H}$ such that $(Ax,y) = (x,z)$ for all $x\in \mathscr{D}(A)$. Then such $z$ is unique, for if $z'$ is another element of $\mathscr{H}$ satisfying that condition, we have $(x,z-z') =  0$ for all $x\in \mathscr{D}(A)$, which implies $z-z'=0$ since $\mathscr{D}(A)$ is \PMlinkname{dense}{Dense}. Hence we may define a new operator $A^*:\mathscr{D}(A^*)\subset\mathscr{H}\to\mathscr{H}$ by 
+\begin{align*}
+\mathscr{D}(A^*) =& \{y\in \mathscr{H} : \text{there is} z\in \mathscr{H} \text{such that} (Ax,y) = (x,z)\},\\
+A^*(y) =& z.
+\end{align*}
+It is easy to see that $A^*$ is linear, and it is called the \textbf{adjoint} of $A$.
+
+\textbf{Remark.} The requirement for $A$ to be densely defined is essential, for otherwise we cannot guarantee $A^*$ to be well defined.
+%%%%%
+%%%%%
+\end{document}

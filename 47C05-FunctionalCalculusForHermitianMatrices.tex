@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FunctionalCalculusForHermitianMatrices}
+\pmcreated{2013-03-22 14:40:12}
+\pmmodified{2013-03-22 14:40:12}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{functional calculus for Hermitian matrices}
+\pmrecord{4}{36271}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47C05}
+\pmrelated{FunctionalCalculus}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Let $I\subset\mathbb{R}$ be a real interval, $f$ a real-valued function on $I$, and let $M$ be an $n\times n$ real symmetric (and thus Hermitian) matrix whose eigenvalues are contained in $I$.
+
+By the spectral theorem, we can diagonalize $M$ by an orthogonal matrix $O$, so we can write $M=ODO^{-1}$ where $D$ is the diagonal matrix consisting of the eigenvalues $\{\lambda_1,\lambda_2,\ldots,\lambda_n\}$.  We then define
+
+\begin{align*}
+f(A)=Of(D)O^{-1},
+\end{align*}
+
+where $f(D)$ denotes the diagonal matrix whose diagonal entries are given by $f(\lambda_i)$.
+
+It is easy to verify that $f(A)$ is well-defined, i.e. a permutation of the eigenvalues corresponds to the same definition of $f(A)$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulerLagrangeDifferentialEquationadvanced}
+\pmcreated{2013-03-22 14:45:32}
+\pmmodified{2013-03-22 14:45:32}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Euler-Lagrange differential equation (advanced)}
+\pmrecord{16}{36400}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+\pmsynonym{Euler-Lagrange condition}{EulerLagrangeDifferentialEquationadvanced}
+%\pmkeywords{CalculusOfVariations}
+\pmdefines{Euler-Lagrange differential equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $M$ and $N$ be $C^2$ manifolds.  Let $L \colon M \times TN \to \mathbb{R}$ be twice differentiable.  Define a functional $F \colon D \subset C^2 (M, N) \to \mathbb{R}$ as
+ $$F(q) = \int_M L \left( x, q(x), {\bf D} q(x) \right) \, d^m x$$
+where $D$ is the subset of \PMlinkid{$C^2 (M, N)$}{5555} for which this integral converges.
+
+Note that if $f \in D$ and $g \in C^2(M,N)$ and the set $\{ x \in M \mid f(x) \neq g(x) \}$ is compact, then $g \in D$.  We may impose a topology on $D$ as follows: Suppose that $f \in D$, that $K \subset M$ is compact, and that $U_0 \subset C^2 (K,N)$ is open.  Then we define an open set $U \subset D$ as the set of all functions $g \in D$ such that $f(x) = g(x)$ when $x \notin K$ and such that the restriction of $g$ to $K$ lies in $U_0$.
+
+It is not hard to show that the functional $F$ is continuous in this topology, and hence it makes sense to speak of local extrema of $F$.  Suppose that $q_0 \in C^2 (M,N)$ is a local extremum.  Furthermore, suppose that $f \colon M \times [-1,+1] \to N$ is twice differentiable and $f(x,0) = q_0 (x)$ for all $x \in q_0$ and $f(x,y) = q_0 (x)$ for all $y \in [-1,+1]$ when $x$ does not lie in a certain compact subset $K \subset M$.  Then, viewed as a map from $[-1,+1]$ to $D$, $f$ will be continuous.  Therefore, since $q_0$ is a local extremum of $F$, $0$ wil be a local extremum of the function $y \mapsto F (f(\cdot,y))$.  Because the function $y \mapsto F (f(\cdot,y))$ is differentiable, it will be the case that
+ $${d \over d\lambda} F (f(\cdot,\lambda)) \big|_{\lambda = 0} = 0$$
+
+It can be shown (see the addendum to this entry) that this condition will be satisfied if and only if $q_0$ is a solution of the following differential equation:
+\begin{equation}\label{el}
+ dL - d \, \left({\partial L \over \partial(dq)}\right) = 0.
+\end{equation}
+This differential equation is known as the \emph{Euler-Lagrange differential equation} (or Euler-Lagrange condition).
+
+The Euler-Lagrange equation can only be used to investigate local extrema which are smooth functions.  To a certain extent, this limitation can be ameliorated --- one can study piecewise smooth functions by supplementing the Euler-Lagrange equation with auxiliary conditions at discontinuities and, in some cases, one can consider non-smooth solutions as weak solutions of the Euler-Lagrange equation.
+
+In the special cases $d L = 0$, the Euler-Lagrange equation can be replaced by the Beltrami identity.
+%%%%%
+%%%%%
+\end{document}

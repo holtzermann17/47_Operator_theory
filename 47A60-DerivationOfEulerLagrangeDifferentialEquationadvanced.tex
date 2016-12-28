@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfEulerLagrangeDifferentialEquationadvanced}
+\pmcreated{2013-03-22 14:45:13}
+\pmmodified{2013-03-22 14:45:13}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivation of Euler-Lagrange differential equation (advanced)}
+\pmrecord{8}{36393}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A60}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $x_0 \in D$.  Choose $r$ such that the closed ball of radius $r$ about $x_0$ is contained in $D$.  Let $q$ be any function whose support lies in this closed ball.
+
+By the definition of $F$,
+ $${\partial \over \partial \lambda} F (q_0 + \lambda q) = {\partial \over \partial \lambda} \int_D L (x, q_0 + \lambda q, dq_0 + \lambda dq) \, d^m x$$
+$$= {\partial \over \partial \lambda} \left( \int_{|x - x_0| \le r} L (x, q_0 + \lambda q, dq_0 + \lambda dq) \, d^m x + \int_{x \in D \atop |x - x_0| > r} L (x, q_0 + \lambda q, dq_0 + \lambda dq) \, d^m x \right)$$
+By the condition imposed on $q$, the derivative of the second integral is zero.  Since the integrand of the first integral and its first derivatives are continuous and the closed ball is compact, the integrand and its first derivatives are uniformly continuous, so it is permissible to interchange differentiation and integration.  Hence,
+ $${\partial \over \partial \lambda} F (q_0 + \lambda q) = \int_{|x - x_0| \le r} {\partial L (x, q_0 + \lambda q, dq_0 + \lambda dq) \over \partial \lambda} \, d^m x$$
+%%%%%
+%%%%%
+\end{document}

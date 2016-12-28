@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpectralMeasure}
+\pmcreated{2013-03-22 17:32:06}
+\pmmodified{2013-03-22 17:32:06}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{spectral measure}
+\pmrecord{11}{39932}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A56}
+\pmclassification{msc}{46G12}
+\pmclassification{msc}{46G10}
+\pmclassification{msc}{28C20}
+\pmclassification{msc}{28B05}
+\pmsynonym{projection valued measure}{SpectralMeasure}
+\pmdefines{integration against spectral measures}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{projections}
+\PMlinkescapeword{orthogonal}
+\PMlinkescapeword{property}
+
+\section{Definition}
+
+In this entry by a \emph{projection} we \PMlinkescapetext{mean} an orthogonal projection over some Hilbert space. Also, we say that two projections are \emph{orthogonal} if their images are orthogonal subspaces.
+
+Let $H$ be an Hilbert space, $B(H)$ the algebra of bounded operators in $H$ and $(X, \mathcal{B})$ a measurable space.
+
+{\bf Definition -} \emph{A {\bf spectral measure} in $X$ is a function $P : \mathcal{B} \longrightarrow B(H)$ such that}
+\begin{itemize}
+\item[] {\bf a)} \emph{$P(E)$ is a projection in $B(H)$ for every $E \in \mathcal{B}$.}
+\item[] {\bf b)} \emph{$P(\emptyset)=0$.}
+\item[] {\bf c)} \emph{$P(X) = I$, where $I$ denotes the identity operator in $B(H)$.}
+\item[] {\bf d)} \emph{If $E_1$ and $E_2$ are disjoint subsets of $\mathcal{B}$, then $P(E_1)$ and $P(E_2)$ are orthogonal.}
+\item[] {\bf e)} \emph{$\displaystyle P(\bigcup_{n=1}^{\infty} E_n) = \sum_{n=1}^{\infty} P(E_n)\;\;$ for every sequence $E_1, E_2, \ldots$ of disjoint sets in $\mathcal{B}$.}
+\end{itemize}
+
+The \PMlinkescapetext{series} in the last condition is interpreted as the pointwise limit of the partial sums. Since from condition (d) the projections $P(E_1), P(E_2), \ldots$ are orthogonal, we know that the pointwise limit exists and is a projection (see \PMlinkname{this entry}{LatticeOfProjections}, Theorem 5).
+
+$\,$
+
+{\bf \PMlinkescapetext{Properties} :} In the following $\mathrm{Ran}(T)$ denotes the \PMlinkname{range}{Function} of an operator $T \in B(H)$. 
+\begin{itemize}
+\item $E_1 \subseteq E_2\; \Longrightarrow \; \mathrm{Ran}(P(E_1)) \subseteq \mathrm{Ran}(P(E_2))$.
+\item $P(E_1 \cap E_2) = P(E_1)P(E_2)\;\;$ for every $E_1, E_2 \in \mathcal{B}$.
+\end{itemize}
+
+Thus, a spectral measure is a countably additive vector measure whose values are projections. For that, spectral measures are also called \emph{projection valued measures}.
+
+\section{Examples}
+
+\begin{itemize}
+\item Let $(X, \mathcal{B}, \mu)$ be a measure space. Consider the Hilbert space \PMlinkname{$L^2(X, \mu)$}{L2SpacesAreHilbertSpaces}. We regard a function $f$ in \PMlinkname{$L^{\infty}(X, \mu)$}{LpSpace} as the multiplication operator $M_f \in B(L^2(X,\mu))$ given by
+\begin{align*}
+M_f (\xi) = f\xi\,, \qquad\qquad \xi \in L^2(X, \mu)
+\end{align*}
+In this setting, the characteristic functions are projections in $B(L^2(X, \mu))$ and we have a spectral measure given by
+\begin{align*}
+P:X & \longrightarrow  B(L^2(X, \mu)) \\
+P(E) & :=  \chi_E
+\end{align*}
+\item Let $H$ be a Hilbert space, $T \in B(H)$ a normal operator and $\sigma(T)$ the spectrum of $T$. For any measurable subset $E \subseteq \sigma(T)$ the operators $\chi_E (T)$, given by the Borel functional calculus, are projections in $B(H)$. Moreover, we have a spectral measure given by:
+\begin{align*}
+P:X & \longrightarrow  B(H) \\
+P(E) & :=  \chi_E(T)
+\end{align*}
+\end{itemize}
+
+\section{Equivalent Definition}
+
+The following result provides a very useful equivalent definition of a spectral measure.
+
+{\bf Theorem 1 -} \emph{A function $P: \mathcal{B} \longrightarrow B(H)$ whose values are projections is a spectral measure in $X$ if and only if $P(X) = I$ and for every $\xi, \eta \in H$ the function $\mu_{\xi, \eta}: X \longrightarrow \mathbb{C}$ given by}
+\begin{align*}
+\mu_{\xi, \eta}(E) := \langle P(E)\xi, \eta \rangle
+\end{align*}
+\emph{is a complex measure in $X$.}
+
+\section{Integration against spectral measures}
+
+Let $f :X \longrightarrow \mathbb{C}$ be a \PMlinkname{bounded}{Bounded} measurable function and $P$ a spectral measure in $X$. We are interested to give meaning to the integral
+\begin{displaymath}
+\int_X f dP
+\end{displaymath}
+
+Since we are dealing with ``measures'' whose values are linear operators it is reasonable to expect that this integral is itself a linear operator.
+
+There are two natural ways to define it that turn out to be equivalent. The first approach is a construction that resembles the approximation of $f$ by simple functions in Lebesgue integral theory. Here the role of simple functions will be played by the operators of the form
+\begin{align*}
+\sum_i \lambda_i\, P(E_i)\,, \qquad\qquad \lambda_i \in \mathbb{C}
+\end{align*}
+
+{\bf Theorem 2 -} \emph{There exists a unique operator $S \in B(H)$ with the following property: for any given $\epsilon >0$ and for every measurable partition $\{E_1, \cdots, E_n\}$ of $X$ that satisfies $|f(x)-f(x')| < \epsilon$ for all $x, x' \in E_i$, we have}
+\begin{align*}
+\|S - \sum_{i=1}^n f(x_i) P(E_i)\| < \epsilon
+\end{align*}
+\emph{for any choice of points $x_i \in E_i$.}
+
+$\,$
+
+We can then define $\displaystyle \int_X f dP$ as the unique operator $S$ described by Theorem 2.
+
+The other approach to define this integral is by specifying an appropriate bounded sesquilinear form. Recall that from \PMlinkname{Riesz representation theorem}{RieszRepresentationTheoremOfBoundedSesquilinearForms}, to every bounded sesquilinear form corresponds a unique bounded operator. The construction is as follows:
+
+First we notice that, from the alternative defintion of spectral measure (Theorem 1), for every vectors $\xi, \eta \in H$ we can define a complex measure $\mu_{\xi, \eta}$ by
+\begin{displaymath}
+\mu_{\xi, \eta}(E) = \langle P(E)\,\xi, \eta \rangle,
+\end{displaymath}
+whose total variation is estimated by $\|\mu_{\xi, \eta}\| \leq \|\xi\| \|\eta\|$.
+
+Then we notice that the function $[\cdot,\cdot] : H \times H \longrightarrow \mathbb{C}$ defined by
+\begin{displaymath}
+[\xi, \eta] :=\int_X f\; d\mu_{\xi, \eta}
+\end{displaymath}
+is a \PMlinkescapetext{bounded} sesquilinear form.
+
+Then, by the \PMlinkname{Riesz representation theorem}{RieszRepresentationTheoremOfBoundedSesquilinearForms}, there exists a unique operator $S \in B(H)$ such that
+\begin{align}
+\langle S \xi, \eta \rangle = \int_X f\; d\mu_{\xi, \eta}, \quad\quad \xi, \eta \in H
+\end{align}
+
+We can then define $\displaystyle \int_X f \;dP$ as this operator $S$. Of course, the two definitions are equivalent. We summarize this in the following result
+
+$\,$
+
+{\bf Theorem 3 -} \emph{Given a spectral measure $P$ and a bounded Borel function $f$, an operator $S$ that satisfies condition (1) also satisfies the conditions of Theorem 2. Therefore, both definitions of the integral of $f$ with respect to $P$ coincide and we have that:}
+\begin{itemize}
+\item $\displaystyle \big\langle \int_X f\; dP\, \xi, \eta \big\rangle = \int_X f \;d \mu_{\xi, \eta}$
+\item $\displaystyle \int_X f\; dP$ \emph{can be arbitrarilly approximated in norm by operators of the form} $\displaystyle \sum_{i=1}^n f(x_i)P(E_i)$.
+\end{itemize}
+
+
+\section{Remarks}
+
+The second example we gave above, of a spectral measure associated with a normal operator, is in some sense the general case: all spectral projections in $\mathbb{C}$ supported in a compact set arise from a normal operator. Thus, to any such spectral projection we can associate a normal operator and vice-versa. This interplay between spectral projections and normal operators is deeply explored in some versions of the spectral theorem.
+
+\begin{thebibliography}{9}
+\bibitem{Arv} W. Arveson, \emph{A Short Course on Spectral Theory}, Graduate Texts in Mathematics, 209, Springer, New York, 2002
+\bibitem{conway} J. B. Conway, \emph{A Course in Functional Analysis}, 2nd ed., Graduate Texts in Mathematics, 96, Springer-Verlag, New York, Berlin, 1990.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

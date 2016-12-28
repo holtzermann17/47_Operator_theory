@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TransposeOperator}
+\pmcreated{2013-03-22 17:34:19}
+\pmmodified{2013-03-22 17:34:19}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{transpose operator}
+\pmrecord{5}{39983}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47A05}
+\pmclassification{msc}{46-00}
+\pmsynonym{conjugate operator}{TransposeOperator}
+\pmrelated{Transpose}
+\pmrelated{Adjoint5}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X, Y$ be normed vector spaces and $X', Y'$ be their continuous dual spaces.
+
+{\bf \PMlinkescapetext{Definition} -} Let $T:X \longrightarrow Y$ be a bounded linear operator. The operator $T':Y' \longrightarrow X'$ given by
+\begin{displaymath}
+T'\phi = \phi \circ T , \;\;\; \phi \in Y'
+\end{displaymath}
+is called the {\bf transpose operator} of $T$ or the {\bf conjugate operator} of $T$.
+
+It is clear that $T'$ is well defined, i.e. $\phi \circ T \in X'$, since the composition of two continuous linear operators is again a continuous linear operator.
+
+Moreover, it can be easily checked that $T'$ is a bounded linear operator.
+
+{\bf Remarks -}
+\begin{itemize}
+\item When the vector spaces are finite dimensional, the transpose operator corresponds to \PMlinkname{transposing}{Transpose} the matrix associated to it.
+\item For Hilbert spaces, a somewhat similar definition is that of adjoint operator. But this two notions do not coincide: while the transpose operator corresponds to the transpose of a matrix, the adjoint operator corresponds to the conjugate transpose of a matrix.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

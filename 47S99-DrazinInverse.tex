@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DrazinInverse}
+\pmcreated{2013-03-22 13:58:05}
+\pmmodified{2013-03-22 13:58:05}
+\pmowner{kronos}{12218}
+\pmmodifier{kronos}{12218}
+\pmtitle{Drazin inverse}
+\pmrecord{29}{34738}
+\pmprivacy{1}
+\pmauthor{kronos}{12218}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{47S99}
+\pmrelated{MoorePenroseGeneralizedInverse}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A Drazin inverse of an operator $A$ is an operator, $B$, such that
+$$A B = B A,$$
+$$B A B= B,$$
+$$A B A= A- U,$$
+where the spectral radius $r(U)=0$. The Drazin inverse ($B$) is denoted by $A^D$. It exists, if $0$ is not an accumulation point of $\sigma (A)$.
+
+For example, a projection operator is its own Drazin inverse, $P^D=P$, as
+$PPP = PP = P$; for a Shift operator $S^D=0$ holds.
+
+The following are some other useful properties of the Drazin inverse: 
+\begin{enumerate}
+ \item $(A^D)^*= (A^*)^D$;
+ \item $A^D= (A+ \alpha P^{(A)})^{-1} (I- P^{(A)})$, where $P^{(A)}:= I-A^D A$ is the spectral projection of $A$ at $0$ and $\alpha \neq 0$;
+ \item $A^{\dagger}= (A^* A)^D A^* = A^* (A A^* )^D$, where $A^{\dagger}$ is the Moore-Penrose pseudoinverse of $A$;
+ \item $A^D= A^m (A^{2m+1})^{\dagger} A^m$ for $m \ge \mbox{ind}(A)$, if      $\mbox{ind}(A):= \min \{ k: \operatorname{Im} A^k = \operatorname{Im} A^{k+1} \}$ is finite;
+\item If the matrix is represented explicitly by its Jordan canonical form, ($\Lambda$ regular and $N$ nilpotent), then
+
+$$\left( E \begin{bmatrix} \Lambda & 0 \\ 0 & N \end{bmatrix} E^{-1} \right)^D = E \begin{bmatrix} \Lambda^{-1} & 0 \\ 0 & 0 \end{bmatrix} E^{-1};$$
+\item Let $e_{\lambda}^A$ denote an eigenvector of $A$ to the eigenvalue $\lambda$. Then $e_{\lambda}^A+t (\lambda I- A)^D h e_{\lambda}^A + O(t^2)$ is an eigenvector of $A+ t h$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}
