@@ -1,0 +1,315 @@
+<!DOCTYPE html><html>
+<head>
+<title>spectral theorem</title>
+<!--Generated on Fri Feb  9 21:47:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">spectral theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break"><span class="ltx_ERROR undefined">\PMlinkescapephrase</span>
+<p class="ltx_p">theory
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>state
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>theory
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>series
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>bounded
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>unbounded</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The spectral theorem is series of results in functional analysis that explore conditions for operators in Hilbert spaces to be diagonalizable (in some appropriate sense). These results can also describe how the diagonalization takes , mainly by analyzing how the operator acts in the underlying Hilbert space.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Roughly speaking, the spectral theorems state that normal operators (or self-adjoint operators) are diagonalizable and can be expressed as a sum or, more generally, as an integral of projections. More specifically, a normal (or self-adjoint) operator <math id="S1.p2.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is unitarily equivalent to a multiplication operator in some <math id="S1.p2.m2" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math>-space (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/L2SpacesAreHilbertSpaces</span>) and we can  to it a spectral measure (or a resolution of identity) whose integration gives is <math id="S1.p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">There is a wide  of spectral theorems, each one with its own , applicable to many classes of normal and self-adjoint operators.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Motivation</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">We explore here two  to motivate the spectral theorem. The first is by recalling the finite-dimensional case, corresponding to the well known result in linear algebra, the spectral theorem for Hermitian matrices (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SpectralTheoremForHermitianMatrices</span>) (or the self-adjoint analog). The second motivation comes from the <math id="S2.p1.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CAlgebra</span>) theory, by regarding a normal (or self-adjoint) operator as a continuous function.</p>
+</div>
+<section id="S2.SS0.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.0.1 </span>Finite-dimensional case</h3>
+
+<div id="S2.SS0.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S2.SS0.SSS1.p1.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is a self-adjoint operator in a finite-dimensional Hilbert space <math id="S2.SS0.SSS1.p1.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. An important fact about self-adjoint operators (not just in finite-dimensional spaces) is the following:</p>
+</div>
+<div id="S2.SS0.SSS1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Fact 1 -</span> <em class="ltx_emph ltx_font_italic">If <math id="S2.SS0.SSS1.p2.m1" class="ltx_Math" alttext="V\subseteq H" display="inline"><mrow><mi>V</mi><mo mathvariant="normal">⊆</mo><mi>H</mi></mrow></math> is an invariant subspace by <math id="S2.SS0.SSS1.p2.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, then so it is <math id="S2.SS0.SSS1.p2.m3" class="ltx_Math" alttext="V^{\perp}" display="inline"><msup><mi>V</mi><mo mathvariant="normal">⟂</mo></msup></math>, the orthogonal complement of <math id="S2.SS0.SSS1.p2.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</em></p>
+</div>
+<div id="S2.SS0.SSS1.p3" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof:</em> Let <math id="S2.SS0.SSS1.p3.m1" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math> and <math id="S2.SS0.SSS1.p3.m2" class="ltx_Math" alttext="y\in V^{\perp}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mi>V</mi><mo>⟂</mo></msup></mrow></math>. Then <math id="S2.SS0.SSS1.p3.m3" class="ltx_Math" alttext="\langle x,Ty\rangle=\langle Tx,y\rangle=0" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>, where the last term is zero because <math id="S2.SS0.SSS1.p3.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is invariant by <math id="S2.SS0.SSS1.p3.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, i.e. <math id="S2.SS0.SSS1.p3.m6" class="ltx_Math" alttext="Tx\in V" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>. But this proves that <math id="S2.SS0.SSS1.p3.m7" class="ltx_Math" alttext="Ty\in V^{\perp}" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>y</mi></mrow><mo>∈</mo><msup><mi>V</mi><mo>⟂</mo></msup></mrow></math>. <math id="S2.SS0.SSS1.p3.m8" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="S2.SS0.SSS1.p4" class="ltx_para">
+<p class="ltx_p">In finite dimensions it is known that every linear transformation has, at least, one eigenvector. Of course, the subspace generated by an eigenvector is always invariant.
+</p>
+</div>
+<div id="S2.SS0.SSS1.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS0.SSS1.p5.m1" class="ltx_Math" alttext="v_{1}" display="inline"><msub><mi>v</mi><mn>1</mn></msub></math> be an eigenvector of <math id="S2.SS0.SSS1.p5.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> and <math id="S2.SS0.SSS1.p5.m3" class="ltx_Math" alttext="V_{1}" display="inline"><msub><mi>V</mi><mn>1</mn></msub></math> the subspace generated by it. For self-adjoint transformations, Fact 1 above says that <math id="S2.SS0.SSS1.p5.m4" class="ltx_Math" alttext="V_{1}^{\perp}" display="inline"><msubsup><mi>V</mi><mn>1</mn><mo>⟂</mo></msubsup></math> is also invariant by <math id="S2.SS0.SSS1.p5.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. Thus, by restriction (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RestrictionOfAFunction</span>), we have a self-adjoint operator <math id="S2.SS0.SSS1.p5.m6" class="ltx_Math" alttext="T:V_{1}^{\perp}\longrightarrow V_{1}^{\perp}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msubsup><mi>V</mi><mn>1</mn><mo>⟂</mo></msubsup><mo>⟶</mo><msubsup><mi>V</mi><mn>1</mn><mo>⟂</mo></msubsup></mrow></mrow></math> and we could again find an eigenvector and repeat the same . Thus, we are decomposing <math id="S2.SS0.SSS1.p5.m7" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> as a direct sum of orthogonal one-dimensional subspaces <math id="S2.SS0.SSS1.p5.m8" class="ltx_Math" alttext="H=V_{1}\oplus\dots\oplus V_{n}" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>⊕</mo><mi mathvariant="normal">…</mi><mo>⊕</mo><msub><mi>V</mi><mi>n</mi></msub></mrow></mrow></math>, and the operator <math id="S2.SS0.SSS1.p5.m9" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> can be expressed as a sum</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="T=\sum_{i=1}^{n}\lambda_{i}P_{i}" display="block"><mrow><mi>T</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>P</mi><mi>i</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where each <math id="S2.SS0.SSS1.p5.m10" class="ltx_Math" alttext="\lambda_{i}" display="inline"><msub><mi>λ</mi><mi>i</mi></msub></math> is the eigenvalue associated with the eigenvector <math id="S2.SS0.SSS1.p5.m11" class="ltx_Math" alttext="v_{i}" display="inline"><msub><mi>v</mi><mi>i</mi></msub></math> and each <math id="S2.SS0.SSS1.p5.m12" class="ltx_Math" alttext="P_{i}" display="inline"><msub><mi>P</mi><mi>i</mi></msub></math> is the orthogonal projection onto the subspace <math id="S2.SS0.SSS1.p5.m13" class="ltx_Math" alttext="V_{i}" display="inline"><msub><mi>V</mi><mi>i</mi></msub></math>.</p>
+</div>
+<div id="S2.SS0.SSS1.p6" class="ltx_para">
+<p class="ltx_p">This is exactly the process of diagonalization of a self-adjoint matrix.</p>
+</div>
+<div id="S2.SS0.SSS1.p7" class="ltx_para">
+<p class="ltx_p">For normal operators it is more subtle as Fact 1 is no longer true. The idea to overpass this is that eigenvectors of normal operators are always orthogonal to each other (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/EigenvaluesOfNormalOperators</span>)).</p>
+</div>
+</section>
+<section id="S2.SS0.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">2.0.2 </span><math id="S2.SS0.SSS2.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras</h3>
+
+<div id="S2.SS0.SSS2.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S2.SS0.SSS2.p1.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is a self-adjoint operator in some Hilbert space <math id="S2.SS0.SSS2.p1.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. The closed *-algebra generated by <math id="S2.SS0.SSS2.p1.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> and the identity operator is a commutative <math id="S2.SS0.SSS2.p1.m4" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CAlgebra</span>), which we denote by <math id="S2.SS0.SSS2.p1.m5" class="ltx_Math" alttext="C^{*}(T)" display="inline"><mrow><msup><mi>C</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Hence, the Gelfand-Naimark theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/GelfandTransform</span>) and the continuous functional calculus provide an isomorphism</p>
+</div>
+<div id="S2.SS0.SSS2.p2" class="ltx_para">
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\displaystyle C^{*}(T)\cong C(\sigma(T))" display="inline"><mrow><mrow><msup><mi>C</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS0.SSS2.p2.m1" class="ltx_Math" alttext="\sigma(T)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> stands for the spectrum of <math id="S2.SS0.SSS2.p2.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> and <math id="S2.SS0.SSS2.p2.m3" class="ltx_Math" alttext="C(\sigma(T))" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is the <math id="S2.SS0.SSS2.p2.m4" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra of continuous functions <math id="S2.SS0.SSS2.p2.m5" class="ltx_Math" alttext="\sigma(T)\to\mathbb{C}" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>ℂ</mi></mrow></math>.</p>
+</div>
+<div id="S2.SS0.SSS2.p3" class="ltx_para">
+<p class="ltx_p">Recall that the spectrum of a self-adjoint operator is a always a compact subset of <math id="S2.SS0.SSS2.p3.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Thus, we can think of <math id="S2.SS0.SSS2.p3.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> as a continuous function defined in a subset of <math id="S2.SS0.SSS2.p3.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+<div id="S2.SS0.SSS2.p4" class="ltx_para">
+<p class="ltx_p">It is a well known fact from measure theory that every continuous function <math id="S2.SS0.SSS2.p4.m1" class="ltx_Math" alttext="f:X\longrightarrow\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>⟶</mo><mi>ℂ</mi></mrow></mrow></math> can be approximated by linear combinations of characteristic functions. With some additional effort it can be seen that each continuous function <math id="S2.SS0.SSS2.p4.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is in fact a (vector valued) integral of characteristic functions</p>
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex3.m1" class="ltx_Math" alttext="\displaystyle\displaystyle f=\int_{X}f\,d\chi" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>χ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS0.SSS2.p4.m3" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> is the vector measure of characteristic functions <math id="S2.SS0.SSS2.p4.m4" class="ltx_Math" alttext="\chi(A):=\chi_{A}" display="inline"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><msub><mi>χ</mi><mi>A</mi></msub></mrow></math>.</p>
+</div>
+<div id="S2.SS0.SSS2.p5" class="ltx_para">
+<p class="ltx_p">We now notice that characteristic functions in <math id="S2.SS0.SSS2.p5.m1" class="ltx_Math" alttext="\sigma(T)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> are not continuous in general. Hence, they may not have a correspondent in the <math id="S2.SS0.SSS2.p5.m2" class="ltx_Math" alttext="C^{*}(T)" display="inline"><mrow><msup><mi>C</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the <math id="S2.SS0.SSS2.p5.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra generated by <math id="S2.SS0.SSS2.p5.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> and the identity. The  fact is that they do have a correspondent in the von Neumann algebra generated by <math id="S2.SS0.SSS2.p5.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. Informally, this is the same as saying that characteristic functions belong to <math id="S2.SS0.SSS2.p5.m6" class="ltx_Math" alttext="L^{\infty}(\sigma(T))" display="inline"><mrow><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> rather then <math id="S2.SS0.SSS2.p5.m7" class="ltx_Math" alttext="C(\sigma(T))" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.SS0.SSS2.p6" class="ltx_para">
+<p class="ltx_p">The correspondent operators in the von Neumann algebra generated by <math id="S2.SS0.SSS2.p6.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> must be projections (since characteristic functions are projections in <math id="S2.SS0.SSS2.p6.m2" class="ltx_Math" alttext="L^{\infty}" display="inline"><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup></math>), and similarly, <math id="S2.SS0.SSS2.p6.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> can be approximated by linear combinations of projections and can, in fact, be expressed as an integral of projections:</p>
+<table id="S3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex4.m1" class="ltx_Math" alttext="\displaystyle T=\int_{\sigma(T)}\lambda\;dP(\lambda)" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mstyle><mrow><mpadded width="+2.8pt"><mi>λ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS0.SSS2.p6.m4" class="ltx_Math" alttext="P(\lambda)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a resolution of identity for <math id="S2.SS0.SSS2.p6.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> (or a projection valued measure, when <math id="S2.SS0.SSS2.p6.m6" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is a normal operator).</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Spectral Theorems</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Here we list a series of spectral theorems, applicable to different classes of normal or self-adjoint operators.</p>
+</div>
+<section id="S3.SS0.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.0.1 </span>Normal Operators</h3>
+
+<div id="S3.SS0.SSS1.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for Hermitean matrices (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SpectralTheoremForHermitianMatrices</span>)</p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<p class="ltx_p">This is the finite-dimensional case. It is often referred to as ”the spectral theorem”, especially in linear algebra.</p>
+</div>
+</li>
+</ul>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for bounded (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OperatorNorm</span>) normal operators in separable Hilbert spaces</p>
+</div>
+</li>
+</ul>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for bounded normal operators in inseparable Hilbert spaces</p>
+</div>
+</li>
+</ul>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for compact (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CompactOperator</span>) normal operators</p>
+</div>
+</li>
+</ul>
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for unitary operators</p>
+</div>
+</li>
+</ul>
+<ul id="I6" class="ltx_itemize">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for unbounded (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OperatorNorm</span>) normal operators</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S3.SS0.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">3.0.2 </span>Self-adjoint Operators</h3>
+
+<div id="S3.SS0.SSS2.p1" class="ltx_para">
+<ul id="I7" class="ltx_itemize">
+<li id="I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for self-adjoint matrices</p>
+</div>
+</li>
+</ul>
+<ul id="I8" class="ltx_itemize">
+<li id="I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I8.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for bounded self-adjoint operators in separable Hilbert spaces</p>
+</div>
+</li>
+</ul>
+<ul id="I9" class="ltx_itemize">
+<li id="I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I9.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for bounded self-adjoint operators in inseparable Hilbert spaces</p>
+</div>
+</li>
+</ul>
+<ul id="I10" class="ltx_itemize">
+<li id="I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I10.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for  self-adjoint operators</p>
+</div>
+</li>
+</ul>
+<ul id="I11" class="ltx_itemize">
+<li id="I11.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i1.p1" class="ltx_para">
+<p class="ltx_p">spectral theorem for unbounded self-adjoint operators</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">spectral theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SpectralTheorem1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:04:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:04:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 47B15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 47A15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 47A10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46C99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A18</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:47:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

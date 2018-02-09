@@ -1,0 +1,397 @@
+<!DOCTYPE html><html>
+<head>
+<title>spectral measure</title>
+<!--Generated on Fri Feb  9 21:45:53 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">spectral measure</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Definition</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">In this entry by a <em class="ltx_emph ltx_font_italic">projection</em> we  an orthogonal projection over some Hilbert space. Also, we say that two projections are <em class="ltx_emph ltx_font_italic">orthogonal</em> if their images are orthogonal subspaces.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p2.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be an Hilbert space, <math id="S1.p2.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> the algebra of bounded operators in <math id="S1.p2.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> and <math id="S1.p2.m4" class="ltx_Math" alttext="(X,\mathcal{B})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo stretchy="false">)</mo></mrow></math> a measurable space.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition -</span> <em class="ltx_emph ltx_font_italic">A <span class="ltx_text ltx_font_bold ltx_font_upright">spectral measure</span> in <math id="S1.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a function <math id="S1.p3.m2" class="ltx_Math" alttext="P:\mathcal{B}\longrightarrow B(H)" display="inline"><mrow><mi>P</mi><mo mathvariant="normal">:</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi><mo mathvariant="normal">⟶</mo><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>H</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> such that</em></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"></span> 
+<div id="I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">a)</span> <em class="ltx_emph ltx_font_italic"><math id="I1.ix1.p1.m1" class="ltx_Math" alttext="P(E)" display="inline"><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a projection in <math id="I1.ix1.p1.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>H</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> for every <math id="I1.ix1.p1.m3" class="ltx_Math" alttext="E\in\mathcal{B}" display="inline"><mrow><mi>E</mi><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi></mrow></math>.</em></p>
+</div>
+</li>
+<li id="I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"></span> 
+<div id="I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">b)</span> <em class="ltx_emph ltx_font_italic"><math id="I1.ix2.p1.m1" class="ltx_Math" alttext="P(\emptyset)=0" display="inline"><mrow><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>.</em></p>
+</div>
+</li>
+<li id="I1.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"></span> 
+<div id="I1.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">c)</span> <em class="ltx_emph ltx_font_italic"><math id="I1.ix3.p1.m1" class="ltx_Math" alttext="P(X)=I" display="inline"><mrow><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mi>I</mi></mrow></math>, where <math id="I1.ix3.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> denotes the identity operator in <math id="I1.ix3.p1.m3" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>H</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>.</em></p>
+</div>
+</li>
+<li id="I1.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"></span> 
+<div id="I1.ix4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">d)</span> <em class="ltx_emph ltx_font_italic">If <math id="I1.ix4.p1.m1" class="ltx_Math" alttext="E_{1}" display="inline"><msub><mi>E</mi><mn mathvariant="normal">1</mn></msub></math> and <math id="I1.ix4.p1.m2" class="ltx_Math" alttext="E_{2}" display="inline"><msub><mi>E</mi><mn mathvariant="normal">2</mn></msub></math> are disjoint subsets of <math id="I1.ix4.p1.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi></math>, then <math id="I1.ix4.p1.m4" class="ltx_Math" alttext="P(E_{1})" display="inline"><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>E</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> and <math id="I1.ix4.p1.m5" class="ltx_Math" alttext="P(E_{2})" display="inline"><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>E</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> are orthogonal.</em></p>
+</div>
+</li>
+<li id="I1.ix5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"></span> 
+<div id="I1.ix5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">e)</span> <em class="ltx_emph ltx_font_italic"><math id="I1.ix5.p1.m1" class="ltx_Math" alttext="\displaystyle P(\bigcup_{n=1}^{\infty}E_{n})=\sum_{n=1}^{\infty}P(E_{n})\;\;" display="inline"><mrow><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" mathsize="160%" mathvariant="normal" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mi>n</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>E</mi><mi>n</mi></msub></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" mathvariant="normal" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>E</mi><mi>n</mi></msub><mo mathvariant="normal" rspace="8.1pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for every sequence <math id="I1.ix5.p1.m2" class="ltx_Math" alttext="E_{1},E_{2},\ldots" display="inline"><mrow><msub><mi>E</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi>E</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi></mrow></math> of disjoint sets in <math id="I1.ix5.p1.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi></math>.</em></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">The  in the last condition is interpreted as the pointwise limit of the partial sums. Since from condition (d) the projections <math id="S1.p4.m1" class="ltx_Math" alttext="P(E_{1}),P(E_{2}),\ldots" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> are orthogonal, we know that the pointwise limit exists and is a projection (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LatticeOfProjections</span>), Theorem 5).</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p"><math id="S1.p5.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">:</span> In the following <math id="S1.p6.m1" class="ltx_Math" alttext="\mathrm{Ran}(T)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the range (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Function</span>) of an operator <math id="S1.p6.m2" class="ltx_Math" alttext="T\in B(H)" display="inline"><mrow><mi>T</mi><mo>∈</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="E_{1}\subseteq E_{2}\;\Longrightarrow\;\mathrm{Ran}(P(E_{1}))\subseteq\mathrm{%
+Ran}(P(E_{2}))" display="inline"><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>⊆</mo><mpadded width="+2.8pt"><msub><mi>E</mi><mn>2</mn></msub></mpadded><mo rspace="5.3pt">⟹</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="P(E_{1}\cap E_{2})=P(E_{1})P(E_{2})\;\;" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>E</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mn>2</mn></msub><mo rspace="8.1pt" stretchy="false">)</mo></mrow></mrow></mrow></math> for every <math id="I2.i2.p1.m2" class="ltx_Math" alttext="E_{1},E_{2}\in\mathcal{B}" display="inline"><mrow><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>,</mo><msub><mi>E</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></math>.
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Thus, a spectral measure is a countably additive vector measure whose values are projections. For that, spectral measures are also called <em class="ltx_emph ltx_font_italic">projection valued measures</em>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Examples</h2>
+
+<div id="S2.p1" class="ltx_para">
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i1.p1.m1" class="ltx_Math" alttext="(X,\mathcal{B},\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> be a measure space. Consider the Hilbert space <math id="I3.i1.p1.m2" class="ltx_Math" alttext="L^{2}(X,\mu)" display="inline"><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/L2SpacesAreHilbertSpaces</span>). We regard a function <math id="I3.i1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> in <math id="I3.i1.p1.m4" class="ltx_Math" alttext="L^{\infty}(X,\mu)" display="inline"><mrow><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LpSpace</span>) as the multiplication operator <math id="I3.i1.p1.m5" class="ltx_Math" alttext="M_{f}\in B(L^{2}(X,\mu))" display="inline"><mrow><msub><mi>M</mi><mi>f</mi></msub><mo>∈</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> given by</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex1.m1" class="ltx_Math" alttext="\displaystyle M_{f}(\xi)=f\xi\,,\qquad\qquad\xi\in L^{2}(X,\mu)" display="inline"><mrow><mrow><mrow><msub><mi>M</mi><mi>f</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>ξ</mi></mpadded></mrow></mrow><mo rspace="42.5pt">,</mo><mrow><mi>ξ</mi><mo>∈</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In this setting, the characteristic functions are projections in <math id="I3.i1.p1.m6" class="ltx_Math" alttext="B(L^{2}(X,\mu))" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and we have a spectral measure given by</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\displaystyle P:X" display="inline"><mrow><mi>P</mi><mo>:</mo><mi>X</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex2.m2" class="ltx_Math" alttext="\displaystyle\longrightarrow B(L^{2}(X,\mu))" display="inline"><mrow><mi></mi><mo>⟶</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S2.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex3.m1" class="ltx_Math" alttext="\displaystyle P(E)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex3.m2" class="ltx_Math" alttext="\displaystyle:=\chi_{E}" display="inline"><mrow><mi></mi><mo>:=</mo><msub><mi>χ</mi><mi>E</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i2.p1.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be a Hilbert space, <math id="I3.i2.p1.m2" class="ltx_Math" alttext="T\in B(H)" display="inline"><mrow><mi>T</mi><mo>∈</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> a normal operator and <math id="I3.i2.p1.m3" class="ltx_Math" alttext="\sigma(T)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> the spectrum of <math id="I3.i2.p1.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. For any measurable subset <math id="I3.i2.p1.m5" class="ltx_Math" alttext="E\subseteq\sigma(T)" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> the operators <math id="I3.i2.p1.m6" class="ltx_Math" alttext="\chi_{E}(T)" display="inline"><mrow><msub><mi>χ</mi><mi>E</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>, given by the Borel functional calculus, are projections in <math id="I3.i2.p1.m7" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Moreover, we have a spectral measure given by:</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex4.m1" class="ltx_Math" alttext="\displaystyle P:X" display="inline"><mrow><mi>P</mi><mo>:</mo><mi>X</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex4.m2" class="ltx_Math" alttext="\displaystyle\longrightarrow B(H)" display="inline"><mrow><mi></mi><mo>⟶</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S2.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex5.m1" class="ltx_Math" alttext="\displaystyle P(E)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex5.m2" class="ltx_Math" alttext="\displaystyle:=\chi_{E}(T)" display="inline"><mrow><mi></mi><mo>:=</mo><mrow><msub><mi>χ</mi><mi>E</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Equivalent Definition</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The following result provides a very useful equivalent definition of a spectral measure.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 1 -</span> <em class="ltx_emph ltx_font_italic">A function <math id="S3.p2.m1" class="ltx_Math" alttext="P:\mathcal{B}\longrightarrow B(H)" display="inline"><mrow><mi>P</mi><mo mathvariant="normal">:</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">B</mi><mo mathvariant="normal">⟶</mo><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>H</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> whose values are projections is a spectral measure in <math id="S3.p2.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> if and only if <math id="S3.p2.m3" class="ltx_Math" alttext="P(X)=I" display="inline"><mrow><mrow><mi>P</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mi>I</mi></mrow></math> and for every <math id="S3.p2.m4" class="ltx_Math" alttext="\xi,\eta\in H" display="inline"><mrow><mrow><mi>ξ</mi><mo mathvariant="normal">,</mo><mi>η</mi></mrow><mo mathvariant="normal">∈</mo><mi>H</mi></mrow></math> the function <math id="S3.p2.m5" class="ltx_Math" alttext="\mu_{\xi,\eta}:X\longrightarrow\mathbb{C}" display="inline"><mrow><msub><mi>μ</mi><mrow><mi>ξ</mi><mo mathvariant="normal">,</mo><mi>η</mi></mrow></msub><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">⟶</mo><mi mathvariant="normal">C</mi></mrow></mrow></math> given by</em></p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S3.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex6.m1" class="ltx_Math" alttext="\displaystyle\mu_{\xi,\eta}(E):=\langle P(E)\xi,\eta\rangle" display="inline"><mrow><mrow><msub><mi>μ</mi><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ξ</mi></mrow><mo>,</mo><mi>η</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">is a complex measure in <math id="S3.p2.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</em></p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Integration against spectral measures</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p1.m1" class="ltx_Math" alttext="f:X\longrightarrow\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>⟶</mo><mi>ℂ</mi></mrow></mrow></math> be a bounded (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Bounded</span>) measurable function and <math id="S4.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> a spectral measure in <math id="S4.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. We are interested to give meaning to the integral</p>
+<table id="S4.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex7.m1" class="ltx_Math" alttext="\int_{X}fdP" display="block"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Since we are dealing with “measures” whose values are linear operators it is reasonable to expect that this integral is itself a linear operator.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">There are two natural ways to define it that turn out to be equivalent. The first approach is a construction that resembles the approximation of <math id="S4.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> by simple functions in Lebesgue integral theory. Here the role of simple functions will be played by the operators of the form</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S4.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex8.m1" class="ltx_Math" alttext="\displaystyle\sum_{i}\lambda_{i}\,P(E_{i})\,,\qquad\qquad\lambda_{i}\in\mathbb%
+{C}" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><mpadded width="+1.7pt"><msub><mi>λ</mi><mi>i</mi></msub></mpadded><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mi>i</mi></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="42.5pt">,</mo><msub><mi>λ</mi><mi>i</mi></msub></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 2 -</span> <em class="ltx_emph ltx_font_italic">There exists a unique operator <math id="S4.p4.m1" class="ltx_Math" alttext="S\in B(H)" display="inline"><mrow><mi>S</mi><mo mathvariant="normal">∈</mo><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>H</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> with the following property: for any given <math id="S4.p4.m2" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> and for every measurable partition <math id="S4.p4.m3" class="ltx_Math" alttext="\{E_{1},\cdots,E_{n}\}" display="inline"><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>E</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">⋯</mi><mo mathvariant="normal">,</mo><msub><mi>E</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow></math> of <math id="S4.p4.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> that satisfies <math id="S4.p4.m5" class="ltx_Math" alttext="|f(x)-f(x^{\prime})|&lt;\epsilon" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">-</mo><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>x</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="normal" stretchy="false">|</mo></mrow><mo mathvariant="normal">&lt;</mo><mi>ϵ</mi></mrow></math> for all <math id="S4.p4.m6" class="ltx_Math" alttext="x,x^{\prime}\in E_{i}" display="inline"><mrow><mrow><mi>x</mi><mo mathvariant="normal">,</mo><msup><mi>x</mi><mo mathvariant="normal">′</mo></msup></mrow><mo mathvariant="normal">∈</mo><msub><mi>E</mi><mi>i</mi></msub></mrow></math>, we have</em></p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S4.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex9.m1" class="ltx_Math" alttext="\displaystyle\|S-\sum_{i=1}^{n}f(x_{i})P(E_{i})\|&lt;\epsilon" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>S</mi><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>∥</mo></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">for any choice of points <math id="S4.p4.m7" class="ltx_Math" alttext="x_{i}\in E_{i}" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo mathvariant="normal">∈</mo><msub><mi>E</mi><mi>i</mi></msub></mrow></math>.</em></p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p"><math id="S4.p5.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">We can then define <math id="S4.p6.m1" class="ltx_Math" alttext="\displaystyle\int_{X}fdP" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow></math> as the unique operator <math id="S4.p6.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> described by Theorem 2.</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">The other approach to define this integral is by specifying an appropriate bounded sesquilinear form. Recall that from Riesz representation theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RieszRepresentationTheoremOfBoundedSesquilinearForms</span>), to every bounded sesquilinear form corresponds a unique bounded operator. The construction is as follows:</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">First we notice that, from the alternative defintion of spectral measure (Theorem 1), for every vectors <math id="S4.p8.m1" class="ltx_Math" alttext="\xi,\eta\in H" display="inline"><mrow><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow><mo>∈</mo><mi>H</mi></mrow></math> we can define a complex measure <math id="S4.p8.m2" class="ltx_Math" alttext="\mu_{\xi,\eta}" display="inline"><msub><mi>μ</mi><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow></msub></math> by</p>
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex10.m1" class="ltx_Math" alttext="\mu_{\xi,\eta}(E)=\langle P(E)\,\xi,\eta\rangle," display="block"><mrow><mrow><mrow><msub><mi>μ</mi><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ξ</mi></mrow><mo>,</mo><mi>η</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whose total variation is estimated by <math id="S4.p8.m3" class="ltx_Math" alttext="\|\mu_{\xi,\eta}\|\leq\|\xi\|\|\eta\|" display="inline"><mrow><mrow><mo>∥</mo><msub><mi>μ</mi><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow></msub><mo>∥</mo></mrow><mo>≤</mo><mrow><mrow><mo>∥</mo><mi>ξ</mi><mo>∥</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mi>η</mi><mo>∥</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">Then we notice that the function <math id="S4.p9.m1" class="ltx_Math" alttext="[\cdot,\cdot]:H\times H\longrightarrow\mathbb{C}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">]</mo></mrow><mo>:</mo><mrow><mrow><mi>H</mi><mo>×</mo><mi>H</mi></mrow><mo>⟶</mo><mi>ℂ</mi></mrow></mrow></math> defined by</p>
+<table id="S4.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex11.m1" class="ltx_Math" alttext="[\xi,\eta]:=\int_{X}f\;d\mu_{\xi,\eta}" display="block"><mrow><mrow><mo stretchy="false">[</mo><mi>ξ</mi><mo>,</mo><mi>η</mi><mo stretchy="false">]</mo></mrow><mo>:=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub><mrow><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>μ</mi><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow></msub></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a  sesquilinear form.</p>
+</div>
+<div id="S4.p10" class="ltx_para">
+<p class="ltx_p">Then, by the Riesz representation theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RieszRepresentationTheoremOfBoundedSesquilinearForms</span>), there exists a unique operator <math id="S4.p10.m1" class="ltx_Math" alttext="S\in B(H)" display="inline"><mrow><mi>S</mi><mo>∈</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that</p>
+<table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.E1.m1" class="ltx_Math" alttext="\displaystyle\langle S\xi,\eta\rangle=\int_{X}f\;d\mu_{\xi,\eta},\quad\quad\xi%
+,\eta\in H" display="inline"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mrow><mi>S</mi><mo>⁢</mo><mi>ξ</mi></mrow><mo>,</mo><mi>η</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>μ</mi><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow></msub></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mi>ξ</mi></mrow></mrow><mo>,</mo><mrow><mi>η</mi><mo>∈</mo><mi>H</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.p11" class="ltx_para">
+<p class="ltx_p">We can then define <math id="S4.p11.m1" class="ltx_Math" alttext="\displaystyle\int_{X}f\;dP" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow></math> as this operator <math id="S4.p11.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Of course, the two definitions are equivalent. We summarize this in the following result</p>
+</div>
+<div id="S4.p12" class="ltx_para">
+<p class="ltx_p"><math id="S4.p12.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 3 -</span> <em class="ltx_emph ltx_font_italic">Given a spectral measure <math id="S4.p13.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and a bounded Borel function <math id="S4.p13.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, an operator <math id="S4.p13.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> that satisfies condition (1) also satisfies the conditions of Theorem 2. Therefore, both definitions of the integral of <math id="S4.p13.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> with respect to <math id="S4.p13.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> coincide and we have that:</em></p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="\displaystyle\big{\langle}\int_{X}f\;dP\,\xi,\eta\big{\rangle}=\int_{X}f\;d\mu%
+_{\xi,\eta}" display="inline"><mrow><mrow><mo maxsize="120%" minsize="120%">⟨</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>P</mi></mpadded></mrow><mo>⁢</mo><mi>ξ</mi></mrow></mrow><mo>,</mo><mi>η</mi><mo maxsize="120%" minsize="120%">⟩</mo></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>μ</mi><mrow><mi>ξ</mi><mo>,</mo><mi>η</mi></mrow></msub></mrow></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i2.p1.m1" class="ltx_Math" alttext="\displaystyle\int_{X}f\;dP" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow></math> <em class="ltx_emph ltx_font_italic">can be arbitrarilly approximated in norm by operators of the form</em> <math id="I4.i2.p1.m2" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{n}f(x_{i})P(E_{i})" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Remarks</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">The second example we gave above, of a spectral measure associated with a normal operator, is in some sense the general case: all spectral projections in <math id="S5.p1.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> supported in a compact set arise from a normal operator. Thus, to any such spectral projection we can associate a normal operator and vice-versa. This interplay between spectral projections and normal operators is deeply explored in some versions of the spectral theorem.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> W. Arveson, <em class="ltx_emph ltx_font_italic">A Short Course on Spectral Theory</em>, Graduate Texts in Mathematics, 209, Springer, New York, 2002
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> J. B. Conway, <em class="ltx_emph ltx_font_italic">A Course in Functional Analysis</em>, 2nd ed., Graduate Texts in Mathematics, 96, Springer-Verlag, New York, Berlin, 1990.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">spectral measure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SpectralMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:32:06</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:32:06</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 47A56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46G12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46G10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28C20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">projection valued measure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">integration against spectral measures</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:45:53 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

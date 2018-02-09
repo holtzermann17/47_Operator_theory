@@ -1,0 +1,277 @@
+<!DOCTYPE html><html>
+<head>
+<title>functional calculus</title>
+<!--Generated on Fri Feb  9 21:46:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">functional calculus</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Basic Idea</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a normed vector space over a field <math id="S1.p1.m2" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>. Let <math id="S1.p1.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> be a linear operator in <math id="S1.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S1.p1.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> the identity operator in <math id="S1.p1.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The  <span class="ltx_text ltx_font_bold">functional calculus</span> refers to a specific process which enables the expression</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="f(T)" display="block"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">to make sense as a linear operator in <math id="S1.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, for certain scalar functions <math id="S1.p2.m2" class="ltx_Math" alttext="f:\mathbb{K}\longrightarrow\mathbb{K}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>𝕂</mi><mo>⟶</mo><mi>𝕂</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">At first sight, and for most functions <math id="S1.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, there is no reason why the above expression should be associated with a particular linear operator.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">But, for example, when <math id="S1.p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a polynomial <math id="S1.p4.m2" class="ltx_Math" alttext="f(x)=a_{k}x^{k}+\dots+a_{2}x^{2}+a_{1}x+a_{0}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mrow></math>, the expression</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="f(T):=a_{k}T^{k}+\dots+a_{2}T^{2}+a_{1}T+a_{0}I" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>T</mi><mi>k</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>T</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>T</mi></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">does indeed refer to a linear operator in <math id="S1.p4.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">As another example, when <math id="S1.p5.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is a matrix in <math id="S1.p5.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> or <math id="S1.p5.m3" class="ltx_Math" alttext="\mathbb{C}^{n}" display="inline"><msup><mi>ℂ</mi><mi>n</mi></msup></math> one is sometimes led to the exponential (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/MatrixExponential</span>) of <math id="S1.p5.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math></p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="e^{T}=\sum_{k=0}^{\infty}\frac{T^{k}}{k!}" display="block"><mrow><msup><mi>e</mi><mi>T</mi></msup><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><msup><mi>T</mi><mi>k</mi></msup><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, we are applying the scalar exponential function to a matrix.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Note in this last example that <math id="S1.p6.m1" class="ltx_Math" alttext="e^{T}" display="inline"><msup><mi>e</mi><mi>T</mi></msup></math> is approximated by polynomials (the partial sums of the series). This provides an idea of how to make sense of <math id="S1.p6.m2" class="ltx_Math" alttext="f(T)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> if <math id="S1.p6.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be approximated by polynomials:
+</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">If <math id="S1.p7.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be approximated by polynomials <math id="S1.p7.m2" class="ltx_Math" alttext="p_{n}" display="inline"><msub><mi>p</mi><mi>n</mi></msub></math> then one could try to define</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="f(T):=\lim_{n\rightarrow\infty}p_{n}(T)" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msub><mi>p</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">But for that one needs to define what “approximated” means and to assure the above limit exists.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>More abstractly</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">There is no reason why one should restrict to linear operators in a normed vector space. In this , we can consider instead a unital topological algebra <math id="S2.p1.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> over a field <math id="S2.p1.m2" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">There is no definition in mathematics of <span class="ltx_text ltx_font_bold">functional calculus</span>, but the ideas above show that a <em class="ltx_emph ltx_font_italic">functional calculus for an element</em> <math id="S2.p2.m1" class="ltx_Math" alttext="T\in\mathcal{A}" display="inline"><mrow><mi>T</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math> should be something like an homomorphism <math id="S2.p2.m2" class="ltx_Math" alttext="(\cdot)(T):\mathcal{F}\longrightarrow\mathcal{A}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⟶</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></mrow></math> from some topological algebra of scalar functions <math id="S2.p2.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> to <math id="S2.p2.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>, that satisfied the following :</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> must contain the polynomial functions.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="(\cdot)(T)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> is continuous.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="p(T)=a_{k}T^{k}+\dots+a_{2}T^{2}+a_{1}T+a_{0}I" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>T</mi><mi>k</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>T</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>T</mi></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow></mrow></mrow></math> for each polynomial <math id="I1.i3.p1.m2" class="ltx_Math" alttext="p(x)=a_{k}x^{k}+\dots+a_{2}x^{2}+a_{1}x+a_{0}" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mrow></math>, where <math id="I1.i3.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> denotes the identity element of <math id="I1.i3.p1.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Functional Calculi</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">There are some functional calculi of . We give a very brief descprition of each one of them (please follows the links for entries with more detailed explanation).</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">polynomial functional calculus - </em>
+</p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p">This is valid for any element <math id="I2.i1.p2.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> in any algebra <math id="I2.i1.p2.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>. It associates polynomials to elements in the algebra generated by <math id="I2.i1.p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, as discussed above.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">functional calculus - </em></p>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<p class="ltx_p">This is valid for any element <math id="I2.i2.p2.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> in a complex Banach algebra <math id="I2.i2.p2.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>. It associates complex analytic functions defined on the spectrum (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Spectrum</span>) of <math id="I2.i2.p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> to elements in the algebra generated by <math id="I2.i2.p2.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">continuous functional calculus - </em></p>
+</div>
+<div id="I2.i3.p2" class="ltx_para">
+<p class="ltx_p">This is valid for normal elements in <math id="I2.i3.p2.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CAlgebra</span>). It associates continuous functions on the spectrum of <math id="I2.i3.p2.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> to elements in the <math id="I2.i3.p2.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra generated by <math id="I2.i3.p2.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Borel functional calculus - </em></p>
+</div>
+<div id="I2.i4.p2" class="ltx_para">
+<p class="ltx_p">This is valid for normal operators <math id="I2.i4.p2.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> in a von Neumann algebra <math id="I2.i4.p2.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>. It associates bounded Borel measurable functions on the spectrum of <math id="I2.i4.p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> to elements in the von Neumann algebra generated by <math id="I2.i4.p2.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">functional calculus for Hermitian matrices - </em></p>
+</div>
+<div id="I2.i5.p2" class="ltx_para">
+<p class="ltx_p">A  case. It is valid for Hermitian matrices <math id="I2.i5.p2.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. It associates real valued functions on the spectrum of <math id="I2.i5.p2.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> to elements in the algebra generated by <math id="I2.i5.p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Applications</h2>
+
+<div id="S4.p1" class="ltx_para">
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Functional calculi provide an  of constructing new linear operators having specified  out of given ones.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">There are strong  with spectral theory since one usually has <math id="I3.i2.p1.m1" class="ltx_Math" alttext="f(\sigma(T))=\sigma(f(T))" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="I3.i2.p1.m2" class="ltx_Math" alttext="\sigma(\cdot)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow></math> denotes the spectrum of its . This is called the spectral mapping theorem.
+</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">As the  with spectral theory can possibly show, functional calculi are an  tool for studying  equations. For example, they can give sufficient conditions for the existence of a square root <math id="I3.i3.p1.m1" class="ltx_Math" alttext="\sqrt{T}" display="inline"><msqrt><mi>T</mi></msqrt></math> of an  <math id="I3.i3.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">functional calculus</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FunctionalCalculus</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:29:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:29:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 47A60</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46H30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FunctionalCalculusForHermitianMatrices</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ContinuousFunctionalCalculus2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PolynomialFunctionalCalculus</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BorelFunctionalCalculus</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:46:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

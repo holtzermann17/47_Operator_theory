@@ -1,0 +1,166 @@
+<!DOCTYPE html><html>
+<head>
+<title>Euler-Lagrange differential equation (elementary)</title>
+<!--Generated on Fri Feb  9 21:46:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Euler-Lagrange differential equation (elementary)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="q(t)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a twice differentiable function from <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to <math id="p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> and let <math id="p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> be a twice differentiable function from <math id="p1.m5" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> to <math id="p1.m6" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Let
+<math id="p1.m7" class="ltx_Math" alttext="\dot{q}" display="inline"><mover accent="true"><mi>q</mi><mo>˙</mo></mover></math> denote <math id="p1.m8" class="ltx_Math" alttext="\frac{d}{d{t}}{q}" display="inline"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mi>q</mi></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Define the functional <math id="p2.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> as follows:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="I(q)=\int_{a}^{b}L(t,q(t),\dot{q}(t))\,dt" display="block"><mrow><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>b</mi></msubsup><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Suppose we regard the function <math id="p2.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> and the limits of integratiuon <math id="p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p2.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+as fixed and allow <math id="p2.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> to vary. Then we could ask for which functions <math id="p2.m6" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> (if any) this integral attains an extremal (minimum or maximum) value. (Note: especially in Physics literature, the function <math id="p2.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is known as the <em class="ltx_emph ltx_font_italic">Lagrangian</em>.)</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Suppose that a differentiable function  <math id="p3.m1" class="ltx_Math" alttext="q_{0}\!:[a,b]\to\mathbb{R}" display="inline"><mrow><mpadded width="-1.7pt"><msub><mi>q</mi><mn>0</mn></msub></mpadded><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>  is an extremum of <math id="p3.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. Then, for every differentiable function  <math id="p3.m3" class="ltx_Math" alttext="f\colon[-1,+1]\times[a,b]\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow><mo>×</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>  such that  <math id="p3.m4" class="ltx_Math" alttext="f(0,x)=q_{0}(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>q</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, the function
+ <math id="p3.m5" class="ltx_Math" alttext="g\colon[-1,+1]\to\mathbb{R}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>,  defined as</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="g(\lambda)=\int_{a}^{b}L\left(t,f(\lambda,t),{\partial f\over\partial t}(%
+\lambda,t)\right)\,dt" display="block"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>b</mi></msubsup><mrow><mi>L</mi><mo>⁢</mo><mrow><mo>(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">will have an extremum at <math id="p3.m6" class="ltx_Math" alttext="\lambda=0" display="inline"><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow></math>. If this function is differentiable, then  <math id="p3.m7" class="ltx_Math" alttext="dg/d\lambda=0" display="inline"><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>g</mi></mrow><mo>/</mo><mi>d</mi></mrow><mo>⁢</mo><mi>λ</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>  when  <math id="p3.m8" class="ltx_Math" alttext="\lambda=0" display="inline"><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By studying the condition <math id="p4.m1" class="ltx_Math" alttext="dg/d\lambda=0" display="inline"><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>g</mi></mrow><mo>/</mo><mi>d</mi></mrow><mo>⁢</mo><mi>λ</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> (see the addendum to this entry for details), one sees that, if a function <math id="p4.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is to be an extremum of the integral <math id="p4.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, then <math id="p4.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> must satisfy the following equation:</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\frac{\partial}{\partial{q}}L-\frac{d}{d{t}}\left(\frac{\partial}{\partial{%
+\dot{q}}}L\right)=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow><mo>-</mo><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>q</mi><mo>˙</mo></mover></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This equation is known as the <em class="ltx_emph ltx_font_italic">Euler–Lagrange differential equation</em> or the Euler-Lagrange condition. A few comments on notation might be in . The notations <math id="p4.m5" class="ltx_Math" alttext="\frac{\partial}{\partial{q}}L" display="inline"><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow></math> and <math id="p4.m6" class="ltx_Math" alttext="\frac{\partial}{\partial{\dot{q}}}L" display="inline"><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>q</mi><mo>˙</mo></mover></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow></math> denote the partial derivatives of the function <math id="p4.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> with respect to its second and third arguments, respectively. The notation <math id="p4.m8" class="ltx_Math" alttext="\frac{d}{d{t}}" display="inline"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></math> means that one is to first make the argument a function of <math id="p4.m9" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> by replacing the second argument with <math id="p4.m10" class="ltx_Math" alttext="q(t)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and the third argument with <math id="p4.m11" class="ltx_Math" alttext="\dot{q}(t)" display="inline"><mrow><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and secondly, differentiate the resulting function with respect to <math id="p4.m12" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. Using the chain rule, the Euler-Lagrange equation can be written as follows:</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\frac{\partial}{\partial{q}}L-{\partial^{2}\over\partial t\partial\dot{q}}L-%
+\dot{q}{\partial^{2}\over\partial q\partial\dot{q}}L-\ddot{q}{\partial^{2}%
+\over\partial\dot{q}^{2}}L=0" display="block"><mrow><mrow><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow><mo>-</mo><mrow><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>q</mi><mo>˙</mo></mover></mrow></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow><mo>-</mo><mrow><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>q</mi><mo>˙</mo></mover></mrow></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow><mo>-</mo><mrow><mover accent="true"><mi>q</mi><mo>¨</mo></mover><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><msup><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">This equation plays an important role in the calculus of variations. In using this equation, it must be remembered that it is only a necessary condition and, hence, given a solution of this equation, one cannot  to the conclusion that this solution is a local extremum of the functional <math id="p5.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. More work is needed to determine whether the solution of the Euler-Lagrange equation is an extremum of the integral <math id="p5.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> or not.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">In the special case <math id="p6.m1" class="ltx_Math" alttext="\frac{\partial}{\partial{t}}L=0" display="inline"><mrow><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mi>L</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, the Euler-Lagrange equation can be replaced by the Beltrami identity.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Euler-Lagrange differential equation (elementary)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EulerLagrangeDifferentialEquationelementary</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:21:49</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:21:49</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">34</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 47A60</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 70H03</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 49K05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Euler-Lagrange condition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CalculusOfVariations</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BeltramiIdentity</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">VersionOfTheFundamentalLemmaOfCalculusOfVariations</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Euler-Lagrange differential equation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Lagrangian</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:46:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

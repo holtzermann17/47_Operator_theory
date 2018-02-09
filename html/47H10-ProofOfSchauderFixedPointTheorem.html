@@ -1,0 +1,216 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Schauder fixed point theorem</title>
+<!--Generated on Fri Feb  9 21:47:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Schauder fixed point theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The idea of the proof is to reduce to the finite dimensional case where we can apply the Brouwer fixed point theorem.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Given <math id="p2.m1" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> notice that the family of open sets <math id="p2.m2" class="ltx_Math" alttext="\{B_{\epsilon}(x)\colon x\in K\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><msub><mi>B</mi><mi>ϵ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>K</mi></mrow><mo stretchy="false">}</mo></mrow></math> is an open covering of <math id="p2.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. Being <math id="p2.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> compact there exists a finite subcover, i.e. there exists <math id="p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> points <math id="p2.m6" class="ltx_Math" alttext="x_{1},\ldots,x_{n}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></math> of <math id="p2.m7" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> such that the balls <math id="p2.m8" class="ltx_Math" alttext="B_{\epsilon}(x_{i})" display="inline"><mrow><msub><mi>B</mi><mi>ϵ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> cover the whole set <math id="p2.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Define the functions <math id="p3.m1" class="ltx_Math" alttext="g_{1},\ldots,g_{n}" display="inline"><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>g</mi><mi>n</mi></msub></mrow></math> by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="g_{i}(x):=\begin{cases}\epsilon-\|x-x_{i}\|,&amp;\;\;\textrm{if $\|x-x_{i}\|\leq%
+\epsilon$}\\
+0,&amp;\;\;\textrm{if $\|x-x_{i}\|\geq\epsilon$}\end{cases}" display="block"><mrow><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mi>ϵ</mi><mo>-</mo><mrow><mo>∥</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>∥</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mpadded lspace="5.6pt" width="+5.6pt"><mrow><mtext>if </mtext><mrow><mrow><mo>∥</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>∥</mo></mrow><mo>≤</mo><mi>ϵ</mi></mrow></mrow></mpadded></mtd></mtr><mtr><mtd columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mpadded lspace="5.6pt" width="+5.6pt"><mrow><mtext>if </mtext><mrow><mrow><mo>∥</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>∥</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></mrow></mpadded></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">It is clear that each <math id="p4.m1" class="ltx_Math" alttext="g_{i}" display="inline"><msub><mi>g</mi><mi>i</mi></msub></math> is continuous, <math id="p4.m2" class="ltx_Math" alttext="g_{i}(x)\geq 0" display="inline"><mrow><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math> and <math id="p4.m3" class="ltx_Math" alttext="\sum_{i=1}^{n}g_{i}(x)&gt;0" display="inline"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> for every <math id="p4.m4" class="ltx_Math" alttext="x\in K" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>K</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Thus we can define a function in <math id="p5.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="g(x):=\frac{\sum_{i=1}^{n}g_{i}(x)x_{i}}{\sum_{i=1}^{n}g_{i}(x)}" display="block"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mfrac><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The above function <math id="p6.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a continuous function from <math id="p6.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> to the convex hull <math id="p6.m3" class="ltx_Math" alttext="K_{0}" display="inline"><msub><mi>K</mi><mn>0</mn></msub></math> of <math id="p6.m4" class="ltx_Math" alttext="x_{1},\ldots,x_{n}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></math>. Moreover one can easily prove the following</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\|g(x)-x\|\leq\epsilon\quad\;\;\forall_{x\in K}" display="block"><mrow><mrow><mo>∥</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>x</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mi>ϵ</mi><mo mathvariant="italic" separator="true">  </mo><msub><mo>∀</mo><mrow><mi>x</mi><mo>∈</mo><mi>K</mi></mrow></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now, define the function <math id="p7.m1" class="ltx_Math" alttext="B:=g\circ f" display="inline"><mrow><mi>B</mi><mo>:=</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow></mrow></math>. The restriction <math id="p7.m2" class="ltx_Math" alttext="\tilde{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false">~</mo></mover></math> of <math id="p7.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to <math id="p7.m4" class="ltx_Math" alttext="K_{0}" display="inline"><msub><mi>K</mi><mn>0</mn></msub></math> provides a continuous function <math id="p7.m5" class="ltx_Math" alttext="K_{0}\longrightarrow K_{0}" display="inline"><mrow><msub><mi>K</mi><mn>0</mn></msub><mo>⟶</mo><msub><mi>K</mi><mn>0</mn></msub></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Since <math id="p8.m1" class="ltx_Math" alttext="K_{0}" display="inline"><msub><mi>K</mi><mn>0</mn></msub></math> is compact convex subset of a finite dimensional vector space, we can apply the Brouwer fixed point theorem to assure the existence of <math id="p8.m2" class="ltx_Math" alttext="z\in K_{0}" display="inline"><mrow><mi>z</mi><mo>∈</mo><msub><mi>K</mi><mn>0</mn></msub></mrow></math> such that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="B(z)=\tilde{B}(z)=z" display="block"><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>z</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Therefore <math id="p9.m1" class="ltx_Math" alttext="g(f(z))=z" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>z</mi></mrow></math> and we have the inequality</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\|f(z)-z\|=\|f(z)-g(f(z))\|\leq\epsilon" display="block"><mrow><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>z</mi></mrow><mo>∥</mo></mrow><mo>=</mo><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><mi>ϵ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Summarizing, for each <math id="p10.m1" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> there exists <math id="p10.m2" class="ltx_Math" alttext="z=z(\epsilon)\in K" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>K</mi></mrow></math> such that <math id="p10.m3" class="ltx_Math" alttext="\|f(z)-z\|\leq\epsilon" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>z</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mi>ϵ</mi></mrow></math>. Then</p>
+</div>
+<div id="p11" class="ltx_para">
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\forall_{m\in\mathbb{N}}\quad\;\;\exists_{z_{m}\in K}\quad\;\;\|f(z_{m})-z_{m}%
+\|\leq\frac{1}{m}" display="block"><mrow><mrow><msub><mo>∀</mo><mrow><mi>m</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><mo mathvariant="italic" separator="true">  </mo><msub><mo>∃</mo><mrow><msub><mi>z</mi><mi>m</mi></msub><mo>∈</mo><mi>K</mi></mrow></msub><mo mathvariant="italic" separator="true">  </mo><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>z</mi><mi>m</mi></msub></mrow><mo>∥</mo></mrow></mrow><mo>≤</mo><mfrac><mn>1</mn><mi>m</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">As <math id="p12.m1" class="ltx_Math" alttext="f(z_{m})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is in the compact space <math id="p12.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, there is a subsequence <math id="p12.m3" class="ltx_Math" alttext="z_{m_{k}}" display="inline"><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub></math> such that <math id="p12.m4" class="ltx_Math" alttext="f(z_{m_{k}})\longrightarrow x_{0}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow><mo>⟶</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math>, for some <math id="p12.m5" class="ltx_Math" alttext="x_{0}\in K" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>K</mi></mrow></math>.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">We then have</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\|z_{m_{k}}-x_{0}\|" display="inline"><mrow><mo>∥</mo><mrow><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∥</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\|z_{m_{k}}-f(z_{m_{k}})+f(z_{m_{k}})-x_{0}\|" display="inline"><mrow><mo>∥</mo><mrow><mrow><mrow><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∥</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\|f(z_{m_{k}})-z_{m_{k}}\|+\|f(z_{m_{k}})-x_{0}\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub></mrow><mo>∥</mo></mrow><mo>+</mo><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∥</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{m_{k}}+\|f(z_{m_{k}})-x_{0}\|\longrightarrow 0" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>m</mi><mi>k</mi></msub></mfrac></mstyle><mo>+</mo><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∥</mo></mrow></mrow><mo>⟶</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which means that <math id="p13.m1" class="ltx_Math" alttext="z_{m_{k}}\longrightarrow x_{0}" display="inline"><mrow><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo>⟶</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math>.</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">As <math id="p14.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous we have <math id="p14.m2" class="ltx_Math" alttext="f(z_{m_{k}})\longrightarrow f(x_{0})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow><mo>⟶</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Both limits of <math id="p14.m3" class="ltx_Math" alttext="f(z_{m_{k}})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><msub><mi>m</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow></math> must coincide, so we conclude that</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="f(x_{0})=x_{0}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">i.e. <math id="p15.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has a fixed point. <math id="p15.m2" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Schauder fixed point theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfSchauderFixedPointTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:45:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:45:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 47H10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46T99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46T20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46B50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 54H25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:47:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
